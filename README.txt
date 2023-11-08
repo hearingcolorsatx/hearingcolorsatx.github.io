@@ -1,7 +1,13 @@
+
 Solid State by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
+FROM HEARING COLORS:
+
+We're reverse engineering and using this template to redesign and launch our website hearingcolors.com so as to remove our reliance on WordPress. The previous repository got a little messy, so we removed it, and decided to start from scratch to try and keep a cleaner repository.
+
+FROM THE ORIGINAL CREATOR:
 
 After a somewhat extended break from HTML5 UP (to work on a secret-ish new project --
 more on that later!) I'm back with a brand new design: Solid State, a slick new multi-
