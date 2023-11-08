@@ -87,7 +87,7 @@ input, select, textarea {
 		html, body {
 			min-width: 320px;
 		}
-
+		
 	}
 
 	html {
@@ -102,6 +102,7 @@ input, select, textarea {
 		html::before {
 			content: ' ';
 			display: block;
+			background-color: #000000;
 			background-image: url('https://storage.cloud.google.com/hearingcolors_images/Hearing%20Colors.jpg');
 			background-position: center center; 
 			-webkit-background-size: contain;
@@ -122,6 +123,7 @@ input, select, textarea {
 		html::before {
 			content: ' ';
 			display: block;
+			background-color: #000000;
 			background-image: url('https://storage.cloud.google.com/hearingcolors_images/Hearing%20Colors.jpg');
 			background-position: center center; 
 			-webkit-background-size: contain;
@@ -142,6 +144,7 @@ input, select, textarea {
 		html::before {
 			content: ' ';
 			display: block;
+			background-color: #000000;
 			background-image: url('https://storage.cloud.google.com/hearingcolors_images/Hearing%20Colors.jpg');
 			background-position: center center; 
 			-webkit-background-size: contain;
@@ -162,6 +165,7 @@ input, select, textarea {
 		html::before {
 			content: ' ';
 			display: block;
+			background-color: #000000;
 			background-image: url('https://storage.cloud.google.com/hearingcolors_images/Hearing%20Colors.jpg');
 			background-position: center center; 
 			background-size: contain;
@@ -183,6 +187,7 @@ input, select, textarea {
 		html::before {
 			content: ' ';
 			display: block;
+			background-color: #000000;
 			background-image: url('https://storage.cloud.google.com/hearingcolors_images/Hearing%20Colors.jpg');
 			background-position: center center; 
 			-webkit-background-size: contain;
@@ -204,7 +209,7 @@ input, select, textarea {
 		background-image: url("https://storage.cloud.google.com/hearingcolors_images/Hearing%20Colors.jpg");
 		background-size: contain;
 		background-attachment: fixed, fixed;
-		background-position: center, center;
+		background-position: bottom, center;
 		background-repeat: no-repeat;
 	}
 
