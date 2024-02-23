@@ -4,31 +4,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-// function changeGradientColor() {
-//     const spotlight = document.querySelector('.wrapper.spotlight');
-// 	spotlight.style.setProperty('--gradient-colors', 'linear-gradient(to right, #d75c30, #ff9900, #d75c30)');
-
-//     if (spotlight) {
-//         const gradientColors = [
-// 			'linear-gradient(to right, #ff9900, #d75c30, #ff9900)',
-//             'linear-gradient(to right, #ffcc00, #ff9900, #ffcc00)',
-//             'linear-gradient(to right, #d75c30, #ffcc00, #d75c30)',
-//         ];
-//         let currentIndex = 0;
-
-//         function updateGradientColor() {
-//             currentIndex = (currentIndex + 1) % gradientColors.length;
-//             spotlight.style.setProperty('--gradient-colors', gradientColors[currentIndex]);
-//         }
-
-//         setInterval(updateGradientColor, 15000); // Change color every 5 seconds
-//     }
-// }
-
-// changeGradientColor();
 
 // Random color picker for buttons and form fields
-const colors = ['d75c30', 'ff9900', 'ffcc00', '008000', '3366ff', '0096ff', '993366'];
+// const colors = ['d75c30', 'ff9900', 'ffcc00', '008000', '3366ff', '0096ff', '993366'];
+const colors = ['ff6347', 'ffa500', 'ffd700', '2e8b57', '00ced1', '3498db', '8a2be2'];
 
 let previousColor = null;
 
@@ -71,9 +50,9 @@ function addHoverEffect(element) {
         element.addEventListener('mouseout', () => {
             element.style.backgroundColor = '';
         });
-    } else {
-		console.warn(element, 'not found on this page.');
-	}
+    } // else {
+	  // console.warn(element, 'not found on this page.');
+	  // }
 }
 
 addHoverEffect(button);
@@ -117,18 +96,20 @@ addFocusEffect(messageField);
 		}
 
 		function hoverGradient(event) {
-			if(isHovering) {
-				const windowWidth = window.innerWidth;
-				const windowHeight = window.innerHeight;
+			if (isHovering) {
+				// Calculate the position of the mouse cursor relative to the wrapper element
+				const mouseXpercentage = (event.clientX / window.innerWidth) * 100;
+				const mouseYpercentage = (event.clientY / window.innerHeight) * 100;
 				
-				const mouseXpercentage = (event.pageX / windowWidth) * 100;
-				const mouseYpercentage = (event.pageY / windowHeight) * 100;
-				const conicGradient = `conic-gradient(from ${gradientAngle}deg at ${mouseXpercentage}% ${mouseYpercentage}%, ${colors.join(", ")})`;
-				element.style.background = conicGradient;
+				// Define the radial gradient with the center at the mouse cursor
+				const radialGradient = `radial-gradient(circle at ${mouseXpercentage}% ${mouseYpercentage}%, ${colors.join(", ")})`;
+				
+				// Apply the radial gradient to the element's background
+				element.style.background = radialGradient;
 			}
 			requestAnimationFrame(hoverGradient);
 		}
-	
+
 		element.addEventListener('mouseenter', () => {
 			isHovering = true;
 		});
@@ -146,237 +127,28 @@ addFocusEffect(messageField);
 		defaultGradientRotation(); // Start the default behavior
 	}
 	
-	const wrapper = document.querySelector('.wrapper.alt.style1');
-	createGradientHandler(wrapper, ['#d75c30', '#ff9900', '#ffcc00', '#008000', '#3366ff', '#0096ff', '#993366', '#d75c30']);
-	
-	const spotlight = document.querySelector('.wrapper.spotlight');
-	createGradientHandler(spotlight, ['#d75c30', '#ff9900', '#ffcc00', '#d75c30']);
-	
-	const spotlight2 = document.querySelector('.wrapper.spotlight.style2');
-	createGradientHandler(spotlight2, ['#3366ff', '#0096ff', '#993366', '#3366ff']);
-	
-	const spotlight3 = document.querySelector('.wrapper.spotlight.style3');
-	createGradientHandler(spotlight3, [' #ff9900, #ffcc00, #008000, #ff9900']);
-	
-
-	// const wrapper = document.querySelector('.wrapper');
-	// let isHovering = false;
-	// let gradientAngle = 90;
-	
-	// function updateGradientRotation() {
-	// 	gradientAngle += -0.15; // Adjust the rotation speed as needed
-	// 	if (!isHovering) {
-	// 		const conicGradient = `conic-gradient(from ${gradientAngle}deg at -50% 50%, #d75c30, #ff9900, #ffcc00, #008000, #3366ff, #0096ff, #993366, #d75c30)`;
-	// 		wrapper.style.background = conicGradient; // Set the conic gradient
-	// 	}
-	// 	requestAnimationFrame(updateGradientRotation);
-	// }
-	
-	// wrapper.addEventListener('mouseenter', () => {
-	// 	isHovering = true;
-	// });
-	
-	// wrapper.addEventListener('mousemove', (event) => {
-	// 	if (isHovering) {
-	// 		windowWidth = window.innerWidth;
-	// 		windowHeight = window.innerHeight;
-	
-	// 		mouseXpercentage = (event.pageX / windowWidth) * 100;
-	// 		mouseYpercentage = (event.pageY / windowHeight) * 100;
-	// 		const conicGradient = `conic-gradient(from 90deg at ${mouseXpercentage}% ${mouseYpercentage}%, #d75c30, #ff9900, #ffcc00, #008000, #3366ff, #0096ff, #993366, #d75c30)`;
-	// 		spotlight.style.background = conicGradient;
-	// 	}
-	// });
-	
-	// wrapper.addEventListener('mouseleave', () => {
-	// 	isHovering = false;
-	// });
-	
-	// updateGradientRotation();
-
-
-	// The following logic randomizes the color of pseudo-elements
-
-	// function getRandomColor() {
-	// 	const colors = ['d75c30', 'ff9900'];
-	// 	const colors1 = ['ffcc00', '008000'];
-	// 	const colors2 = ['3366ff', '0096ff'];
-	// 	const colors3 = ['993366', 'd75c30'];
-	// 	const randomColor = colors[Math.floor(Math.random() * colors.length)];
-	// 	const randomColor1 = colors1[Math.floor(Math.random() * colors1.length)];
-	// 	const randomColor2 = colors2[Math.floor(Math.random() * colors2.length)];
-	// 	const randomColor3 = colors3[Math.floor(Math.random() * colors3.length)];
-	// 	return [randomColor, randomColor1, randomColor2, randomColor3];
-	// }
-
-	// // Create a new <style> element
-	// const styleElement = document.createElement('style');
-	// document.head.appendChild(styleElement);
-
-	// // Access the sheet property of the <style> element
-	// const styleSheet = styleElement.sheet;
-
-	// const [randomColor, randomColor1, randomColor2, randomColor3] = getRandomColor();
-
-	// // Insert a new rule for .wrapper.spotlight:before
-	// console.log(randomColor);
-	// styleSheet.insertRule(`
-	// .wrapper.spotlight:before, .wrapper.spotlight:after {
-	// 	background-image: linear-gradient(45deg, #${randomColor}, black);
-	// }
-	// `, styleSheet.cssRules.length);	
-
-	// styleSheet.insertRule(`
-	// .wrapper.spotlight:before {
-	// 	box-shadow: inset 0 -1px 0 0 #${randomColor}, 0 1px 0 0 #ff9900;
-	// }
-	// `, styleSheet.cssRules.length);
-
-	// styleSheet.insertRule(`
-	// .wrapper.spotlight:after {
-	// 	box-shadow: inset 0 -1px 0 0 #${randomColor}, 0 1px 0 0 #ff9900;
-	// }
-	// `, styleSheet.cssRules.length);
-	// // styleSheet.insertRule(`
-	// // .wrapper.spotlight:before, .wrapper.spotlight:after {
-	// // 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:linear-gradient(45deg, %23${randomColor}%3B, black' /%3E%3C/svg%3E");
-	// // }
-	// // `, styleSheet.cssRules.length);	
-
-	// // styleSheet.insertRule(`
-	// // .wrapper.spotlight:before {
-	// // 	box-shadow: inset 0 -1px 0 0 #${randomColor}, 0 1px 0 0 #ff9900;
-	// // }
-	// // `, styleSheet.cssRules.length);
-
-	// // styleSheet.insertRule(`
-	// // .wrapper.spotlight:after {
-	// // 	box-shadow: inset 0 -1px 0 0 #${randomColor}, 0 1px 0 0 #ff9900;
-	// // }
-	// // `, styleSheet.cssRules.length)
-
-	// // Insert a new rule for .wrapper.spotlight.style2:before
-	// console.log(randomColor1);
-	// styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-	// 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23${randomColor1}%3B' /%3E%3C/svg%3E");
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style2:before {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor1}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style2:after {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor1}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// // Insert a new rule for .wrapper.spotlight.style3:before
-	// console.log(randomColor2);
-	// styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-	// 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23${randomColor2}%3B' /%3E%3C/svg%3E");
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style3:before {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor2}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style3:after {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor2}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// // Insert a new rule for .wrapper.spotlight.style4:before
-	// console.log(randomColor3);
-	// styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
-	// 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23${randomColor3}%3B' /%3E%3C/svg%3E");
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style4:before {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor3}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style4:after {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor3}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// // Insert a new rule for .wrapper.spotlight.style5:before
-	// const randomColor4 = getRandomColor();
-	// console.log(randomColor4);
-	// styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-	// 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23${randomColor4}%3B' /%3E%3C/svg%3E");
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style5:before {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor4}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style5:after {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor4}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
-
-	// // Insert a new rule for .wrapper.spotlight.style6:before
-	// const randomColor5 = getRandomColor();
-	// console.log(randomColor5);
-	// styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
-	// 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23${randomColor5}%3B' /%3E%3C/svg%3E");
-	// 	}
-	// 	`, styleSheet.cssRules.length);
+	if(document.title === "HEARING COLORS LLC") {
 		
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style6:before {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor5}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
+		const style1 = document.querySelector('.wrapper.alt.style1');
+		createGradientHandler(style1, ['#ff6347', '#ffa500', '#ffd700', '#2e8b57', '#00ced1', '#3498db', '#8a2be2', '#ff6347']);
 		
-	// 	styleSheet.insertRule(`
-	// 	.wrapper.spotlight.style6:after {
-	// 		box-shadow: inset 0 -1px 0 0 #${randomColor5}, 0 1px 0 0 #45558d;
-	// 	}
-	// 	`, styleSheet.cssRules.length);
+		const spotlight = document.querySelector('.wrapper.spotlight');
+		createGradientHandler(spotlight, ['#ff6347', '#ffa500', '#ffd700', '#ff6347']);
 		
-	// 	const randomColor6 = getRandomColor();
-	// 	console.log(randomColor6);
-	// 	styleSheet.insertRule(`
-	// 		.wrapper.spotlight {
-	// 			background-image: linear-gradient(to right, #${randomColor6}, #000000);
-	// 		}
+		const spotlight2 = document.querySelector('.wrapper.spotlight.style2');
+		createGradientHandler(spotlight2, ['#00ced1', '#3498db', '#8a2be2', '#00ced1']);
+		
+		const spotlight3 = document.querySelector('.wrapper.spotlight.style3');
+		console.log(spotlight3)
+		createGradientHandler(spotlight3, [' #ffa500, #ffd700, #2e8b57, #ffa500']);
+		
+	} else if(document.title === "ABOUT") {
 
-	// 		`, styleSheet.cssRules.length);
+		const aboutContent = document.querySelector('.wrapper.about.content');
+		createGradientHandler(aboutContent, ['#ff6347', '#ffa500', '#ffd700', '#2e8b57', '#00ced1', '#3498db', '#8a2be2', '#ff6347']);	
 
-	// 	const randomColor7 = getRandomColor();
-	// 	console.log(randomColor7);
-	// 	styleSheet.insertRule(`
-	// 		.wrapper.spotlight.style2 {
-	// 			background-image: linear-gradient(to left, #${randomColor7}, #000000);
-	// 		}
 
-	// 		`, styleSheet.cssRules.length);
-
-	// Add more styleSheet.insertRule() calls for other styles if needed
-	
+	}
 	// Back to the original code below
 
 	var	$window = $(window),
