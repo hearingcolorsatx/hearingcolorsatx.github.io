@@ -139,7 +139,6 @@ addFocusEffect(messageField);
 		createGradientHandler(spotlight2, ['#00ced1', '#3498db', '#8a2be2', '#00ced1']);
 		
 		const spotlight3 = document.querySelector('.wrapper.spotlight.style3');
-		console.log(spotlight3)
 		createGradientHandler(spotlight3, [' #ffa500, #ffd700, #2e8b57, #ffa500']);
 		
 	} else if(document.title === "ABOUT") {
