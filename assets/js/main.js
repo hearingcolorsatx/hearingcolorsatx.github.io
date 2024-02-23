@@ -147,6 +147,12 @@ addFocusEffect(messageField);
 		createGradientHandler(aboutContent, ['#ff6347', '#ffa500', '#ffd700', '#2e8b57', '#00ced1', '#3498db', '#8a2be2', '#ff6347']);	
 
 
+	} else if(document.title === "NFTs") {
+
+		const aboutContent = document.querySelector('.wrapper.nfts.content');
+		createGradientHandler(aboutContent, ['#ff6347', '#ffa500', '#ffd700', '#2e8b57', '#00ced1', '#3498db', '#8a2be2', '#ff6347']);	
+
+
 	}
 	// Back to the original code below
 

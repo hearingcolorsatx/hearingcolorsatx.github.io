@@ -3911,6 +3911,47 @@ input, select, textarea {
 			width: 100%;
 		}
 
+	.wrapper.nfts.content {
+		/* background: conic-gradient(90deg, #ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498db, #8a2be2, #ff6347); */
+		background: linear-gradient(90deg, #ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498db, #8a2be2, #ff6347);
+		background-size: 200% 100%;
+		margin: 6.5em 0;
+		position: relative;
+		animation: gradientSway 30s linear infinite alternate;
+	}
+	
+	@keyframes gradientSway {
+		0%, 100% {
+			background-position: 50% 0;
+		}
+		50% {
+			background-position: -100% 0;
+		}
+	}
+
+		
+		.wrapper.nfts.content:before {
+			/* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%' y1='0%' x2='100%' y2='0%'%3E%3Cstop offset='33%' style='stop-color:%233498db%3B;stop-opacity:1' /%3E%3Cstop offset='66%' style='stop-color:%2300ced1%3B;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='0,100 100,0 100,100' fill='url(%23grad3)' /%3E%3C/svg%3E"); */
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%238a2be2%3B' /%3E%3C/svg%3E");
+			box-shadow: inset 0 -1px 0 0 #8a2be2, 0 1px 0 0 #8a2be2;
+		}
+		
+		.wrapper.nfts.content:after {
+			/* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%' y1='0%' x2='100%' y2='0%'%3E%3Cstop offset='33%' style='stop-color:%23ff6347%3B;stop-opacity:1' /%3E%3Cstop offset='100%' style='stop-color:%23ff6347%3B;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='0,100 100,0 100,100' fill='url(%23grad3)' /%3E%3C/svg%3E"); */
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ff6347%3B' /%3E%3C/svg%3E");
+			box-shadow: inset 0 -1px 0 0 #ff6347, 0 1px 0 0 #ff6347;
+		}
+
+		.wrapper.nfts.content:before, .wrapper.nfts.content:after {
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			content: '';
+			display: block;
+			height: 6.5em;
+			position: absolute;
+			width: 100%;
+		}
+
 	.wrapper {
 		/* background: conic-gradient(90deg, #ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498db, #8a2be2, #ff6347); */
 		background: linear-gradient(90deg, #ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498db, #8a2be2, #ff6347);
