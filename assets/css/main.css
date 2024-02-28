@@ -3873,8 +3873,8 @@ input, select, textarea {
 	.wrapper.about.content {
 		/* background: conic-gradient(90deg, #ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498db, #8a2be2, #ff6347); */
 		background: linear-gradient(90deg, #ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498db, #8a2be2, #ff6347);
-		background-size: 200% 100%;
-		margin: 6.5em 0;
+		/* background-size: 200% 100%; */
+		/* margin: 6.5em 0; */
 		position: relative;
 		animation: gradientSway 30s linear infinite alternate;
 	}

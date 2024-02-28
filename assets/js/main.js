@@ -128,18 +128,19 @@ addFocusEffect(messageField);
 	}
 	
 	if(document.title === "HEARING COLORS LLC") {
-		
+		// LSD Section
 		const style1 = document.querySelector('.wrapper.alt.style1');
-		createGradientHandler(style1, ['#ff6347', '#ffa500', '#ffd700', '#2e8b57', '#00ced1', '#3498db', '#8a2be2', '#ff6347']);
-		
+		// createGradientHandler(style1, ['#ff6347', '#ffa500', '#ffd700', '#2e8b57', '#00ced1', '#3498db', '#8a2be2', '#ff6347']);
+		createGradientHandler(style1, [' #8a2be2, #ff6347, #ffa500, #8a2be2']);
+		// Intro
 		const spotlight = document.querySelector('.wrapper.spotlight');
 		createGradientHandler(spotlight, ['#ff6347', '#ffa500', '#ffd700', '#ff6347']);
-		
+		// Tim Delaney
 		const spotlight2 = document.querySelector('.wrapper.spotlight.style2');
-		createGradientHandler(spotlight2, ['#00ced1', '#3498db', '#8a2be2', '#00ced1']);
-		
+		createGradientHandler(spotlight2, ['#ffd700', '#2e8b57', '#00ced1', '#ffd700']);
+		// neutron squared
 		const spotlight3 = document.querySelector('.wrapper.spotlight.style3');
-		createGradientHandler(spotlight3, [' #ffa500, #ffd700, #2e8b57, #ffa500']);
+		createGradientHandler(spotlight3, [' #00ced1, #3498db, #8a2be2, #00ced1']);
 		
 	} else if(document.title === "ABOUT") {
 
