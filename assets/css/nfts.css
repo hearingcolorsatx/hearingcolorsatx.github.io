@@ -3524,7 +3524,7 @@ input, select, textarea {
 		}
 
 		#menu h2 {
-			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+			/* border-bottom: solid 2px rgba(255, 255, 255, 0.125); */
 			padding-bottom: 1em;
 		}
 
