@@ -97,10 +97,18 @@ addFocusEffect(messageField);
 
 		function hoverGradient(event) {
 			if (isHovering) {
-				// Calculate the position of the mouse cursor relative to the wrapper element
-				const mouseXpercentage = (event.clientX / window.innerWidth) * 100;
-				const mouseYpercentage = (event.clientY / window.innerHeight) * 100;
-				
+				let mouseXpercentage, mouseYpercentage;
+				if (event.type === 'touchmove') {
+					// For touch events, calculate the position of the touch relative to the wrapper element
+					const touch = event.touches[0];
+					mouseXpercentage = (touch.clientX / window.innerWidth) * 100;
+					mouseYpercentage = (touch.clientY / window.innerHeight) * 100;
+				} else {
+					// For mouse events, calculate the position of the mouse cursor relative to the wrapper element
+					mouseXpercentage = (event.clientX / window.innerWidth) * 100;
+					mouseYpercentage = (event.clientY / window.innerHeight) * 100;
+				}
+								
 				// Define the radial gradient with the center at the mouse cursor
 				const radialGradient = `radial-gradient(circle at ${mouseXpercentage}% ${mouseYpercentage}%, ${colors.join(", ")})`;
 				
@@ -121,6 +129,20 @@ addFocusEffect(messageField);
 		});
 	
 		element.addEventListener('mouseleave', () => {
+			isHovering = false;
+		});
+
+		element.addEventListener('touchstart', () => {
+			isHovering = true;
+		});
+		
+		element.addEventListener('touchmove', (event) => {
+			if (isHovering) {
+				hoverGradient(event);
+			}
+		});
+		
+		element.addEventListener('touchend', () => {
 			isHovering = false;
 		});
 	
