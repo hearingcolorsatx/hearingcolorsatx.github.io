@@ -3954,7 +3954,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			.wrapper {
-				margin: 2.5em 0;
+				margin: 0 0;
 			}
 
 				/* .wrapper:before, .wrapper:after {
