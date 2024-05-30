@@ -161,7 +161,11 @@
 								<!-- <li class="icon solid fa-envelope"><a href="#">your_email@gmail.com ONLY IF YOU WANT!</a></li> -->
 							</ul>
 							<ul class="copyright">
-								<li>&copy; 2023 Hearing Colors LLC. All rights reserved.</li>
+								<li>&copy; 2018-<span id="currentYear"></span> Hearing Colors LLC. All rights reserved.</li>
+								<script>
+									const currentYear = new Date().getFullYear();
+									document.getElementById('currentYear').textContent = currentYear;
+								</script>
 							</ul>
 						</div>
 					</section>
