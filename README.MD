@@ -5,7 +5,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 FROM HEARING COLORS:
 
-We're reverse engineering and using this template to redesign and launch our website hearingcolors.com so as to remove our reliance on WordPress. The previous repository got a little messy, so we removed it, and decided to start from scratch to try and keep a cleaner repository.
+We're reverse engineering and using this template to redesign and relaunch our website hearingcolors.com so as to remove our reliance on WordPress. The previous repository got a little messy, so we removed it, and decided to start from scratch to try and keep a cleaner repository.
 
 #ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498DB, #8A2BE2
 
