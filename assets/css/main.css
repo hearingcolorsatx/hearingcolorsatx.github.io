@@ -87,7 +87,7 @@ input, select, textarea {
 		html, body {
 			min-width: 320px;
 		}
-
+		
 	}
 
 	html {
@@ -98,15 +98,119 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	@media screen and (max-width: 1280px) {
+		html::before {
+			content: ' ';
+			display: block;
+			background-color: #000000;
+			background-image: url('../../images/Hearing Colors.jpg');
+			background-position: center center; 
+			-webkit-background-size: contain;
+			-moz-background-size: contain;
+			-o-background-size: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: fixed;
+			z-index: -10;
+		}
+	}
+	
+	@media screen and (max-width: 980px) {
+		html::before {
+			content: ' ';
+			display: block;
+			background-color: #000000;
+			background-image: url('../../images/Hearing Colors.jpg');
+			background-position: center center; 
+			-webkit-background-size: contain;
+			-moz-background-size: contain;
+			-o-background-size: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: fixed;
+			z-index: -10; 
+		}
+	}
+	
+	@media screen and (max-width: 736px) {
+		html::before {
+			content: ' ';
+			display: block;
+			background-color: #000000;
+			background-image: url('../../images/Hearing Colors.jpg');
+			background-position: center center; 
+			-webkit-background-size: contain;
+			-moz-background-size: contain;
+			-o-background-size: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: fixed;
+			z-index: -10; 
+		}
+	}
+	
+	@media screen and (max-width: 480px) {
+		html::before {
+			content: ' ';
+			display: block;
+			background-color: #000000;
+			background-image: url('../../images/Hearing Colors.jpg');
+			background-position: center center; 
+			background-size: contain;
+			-webkit-background-size: contain;
+			-moz-background-size: contain;
+			-o-background-size: contain;
+			background-size: contain;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: fixed;
+			z-index: -10; 
+		}
+
+	}
+	
+	@media screen and (max-width: 360px) {
+		html::before {
+			content: ' ';
+			display: block;
+			background-color: #000000;
+			background-image: url('../../images/Hearing Colors.jpg');
+			background-position: center center; 
+			-webkit-background-size: contain;
+			-moz-background-size: contain;
+			-o-background-size: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: fixed;
+			z-index: -10; 
+		}
+	}
+
 	body {
-		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-		background-size: auto,
- cover;
-		background-attachment: fixed,
- fixed;
-		background-position: center,
- center;
+		background-color: #000000;
+		background-image: url("../../images/Hearing Colors.jpg");
+		background-size: contain;
+		background-attachment: fixed, fixed;
+		background-position: bottom, center;
+		background-repeat: no-repeat;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3076,7 +3180,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: rgba(53, 56, 73, 0.95);
+		background-color: #000000;
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -3378,7 +3482,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		padding: 10em 0 4.75em 0 ;
+		padding: 50% 0 4.75em 0 ;
 	}
 
 		#banner .inner {
@@ -3464,11 +3568,10 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#banner {
-				padding: 7em 0 8.25em 0 ;
-				background-color: #2e3141;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+				padding: 100% 0 4.75em 0 ;
+				background-color: #000000;
 				background-size: auto,
- cover;
+				cover;
 				background-position: center,
  center;
 				margin-bottom: -6.5em;
@@ -3479,11 +3582,12 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#banner {
-				padding: 12em 3em 12.375em 3em ;
+				padding: 100% 0 4.75em 0 ;
+				background-color: #000000;
 				margin-bottom: -4.75em;
 			}
 
-				#banner .inner {
+			#banner .inner {
 					width: 100%;
 				}
 
@@ -3492,7 +3596,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 5em 2em 4.25em 2em ;
+				padding: 100% 0 4.75em 0 ;
+				background-color: #000000;
 				margin-bottom: -2.5em;
 			}
 
@@ -3625,7 +3730,7 @@ input, select, textarea {
 	}
 
 	.wrapper {
-		background-color: #2e3141;
+		background-color: #000000;
 		margin: 6.5em 0;
 		position: relative;
 	}
@@ -3686,40 +3791,104 @@ input, select, textarea {
 			width: 55em;
 		}
 
-		.wrapper.style2 {
-			background-color: #353849;
+	.wrapper.alt.maz3 {
+		background-color: #000000;
+		margin: 6.5em 0;
+		position: relative;
+	}
+
+		.wrapper.alt.maz3:before, .wrapper.alt.maz3:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232e3141%3B' /%3E%3C/svg%3E");
 		}
 
-			.wrapper.style2:before, .wrapper.style2:after {
+		.wrapper.alt.maz3:before {
+			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+		}
+
+		.wrapper.alt.maz3:after {
+			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+		}
+
+		.wrapper.alt.maz3:before, .wrapper.alt.maz3:after {
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			content: '';
+			display: block;
+			height: 6.5em;
+			position: absolute;
+			width: 100%;
+		}
+
+		.wrapper.alt.maz3:before {
+			left: 0;
+			top: -6.5em;
+		}
+
+		.wrapper.alt.maz3:after {
+			-moz-transform: scaleY(-1);
+			-webkit-transform: scaleY(-1);
+			-ms-transform: scaleY(-1);
+			transform: scaleY(-1);
+			bottom: -6.5em;
+			left: 0;
+		}
+
+		.wrapper.alt.maz3.inner {
+			padding: 3em 0 1em 0 ;
+			margin: 0 auto;
+			width: 55em;
+		}
+
+		.wrapper.about {
+			background-color: #000000;
+		}
+
+			.wrapper.about:before, .wrapper.about:after {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23353849%3B' /%3E%3C/svg%3E");
 			}
 
-			.wrapper.style2:before {
+			.wrapper.about:before {
 				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
 			}
 
-			.wrapper.style2:after {
+			.wrapper.about:after {
 				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
 			}
 
-		.wrapper.style3 {
-			background-color: #3d4051;
+		.wrapper.delaney {
+			background-color: #000000;
 		}
 
-			.wrapper.style3:before, .wrapper.style3:after {
+			.wrapper.delaney:before, .wrapper.delaney:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23353849%3B' /%3E%3C/svg%3E");
+			}
+
+			.wrapper.delaney:before {
+				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+			}
+
+			.wrapper.delaney:after {
+				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+			}
+
+		.wrapper.neutron {
+			background-color: #000000;
+		}
+
+			.wrapper.neutron:before, .wrapper.neutron:after {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");
 			}
 
-			.wrapper.style3:before {
+			.wrapper.neutron:before {
 				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
 			}
 
-			.wrapper.style3:after {
+			.wrapper.neutron:after {
 				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
 			}
 
 		.wrapper.style4 {
-			background-color: #454858;
+			background-color: #000000;
 		}
 
 			.wrapper.style4:before, .wrapper.style4:after {
@@ -3735,7 +3904,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style5 {
-			background-color: #4d5060;
+			background-color: #000000;
 		}
 
 			.wrapper.style5:before, .wrapper.style5:after {
@@ -3751,7 +3920,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style6 {
-			background-color: #555867;
+			background-color: #000000;
 		}
 
 			.wrapper.style6:before, .wrapper.style6:after {
@@ -3767,7 +3936,7 @@ input, select, textarea {
 			}
 
 		.wrapper.spotlight {
-			background-color: #4c5c96;
+			background-color: #000000;
 		}
 
 			.wrapper.spotlight:before, .wrapper.spotlight:after {
@@ -3798,7 +3967,7 @@ input, select, textarea {
 			}
 
 			.wrapper.spotlight .image {
-				border-radius: 100%;
+				border-radius: 0%;
 				margin: 0 3em 2em 0;
 				width: 22em;
 				overflow: hidden;
@@ -3806,7 +3975,7 @@ input, select, textarea {
 			}
 
 				.wrapper.spotlight .image img {
-					border-radius: 100%;
+					border-radius: 0%;
 					width: 100%;
 				}
 
@@ -3827,40 +3996,56 @@ input, select, textarea {
 				margin: 0 0 2em 3em;
 			}
 
-			.wrapper.spotlight.style2 {
-				background-color: #45558d;
+			.wrapper.spotlight.about {
+				background-color: #000000;
 			}
 
-				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
+				.wrapper.spotlight.about:before, .wrapper.spotlight.about:after {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2345558d%3B' /%3E%3C/svg%3E");
 				}
 
-				.wrapper.spotlight.style2:before {
+				.wrapper.spotlight.about:before {
 					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
 				}
 
-				.wrapper.spotlight.style2:after {
+				.wrapper.spotlight.about:after {
 					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
 				}
 
-			.wrapper.spotlight.style3 {
-				background-color: #3f4e85;
+			.wrapper.spotlight.delaney {
+				background-color: #000000;
 			}
 
-				.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
+				.wrapper.spotlight.delaney:before, .wrapper.spotlight.delaney:after {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2345558d%3B' /%3E%3C/svg%3E");
+				}
+
+				.wrapper.spotlight.delaney:before {
+					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
+				}
+
+				.wrapper.spotlight.delaney:after {
+					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
+				}
+
+			.wrapper.spotlight.neutron {
+				background-color: #000000;
+			}
+
+				.wrapper.spotlight.neutron:before, .wrapper.spotlight.neutron:after {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233f4e85%3B' /%3E%3C/svg%3E");
 				}
 
-				.wrapper.spotlight.style3:before {
+				.wrapper.spotlight.neutron:before {
 					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
-				.wrapper.spotlight.style3:after {
+				.wrapper.spotlight.neutron:after {
 					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
 			.wrapper.spotlight.style4 {
-				background-color: #39477c;
+				background-color: #000000;
 			}
 
 				.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
@@ -3876,7 +4061,7 @@ input, select, textarea {
 				}
 
 			.wrapper.spotlight.style5 {
-				background-color: #324072;
+				background-color: #000000;
 			}
 
 				.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
@@ -3892,7 +4077,7 @@ input, select, textarea {
 				}
 
 			.wrapper.spotlight.style6 {
-				background-color: #2d3a69;
+				background-color: #000000;
 			}
 
 				.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
@@ -4023,6 +4208,8 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 auto;
 		width: 55em;
+		background-color: #000000;
+		opacity: 95%;
 	}
 
 		#footer .inner > * {
