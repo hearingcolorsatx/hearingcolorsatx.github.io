@@ -1,16 +1,10 @@
+FROM HEARING COLORS:
+
+We're reverse engineering and using template to redesign and relaunch our website hearingcolors.com, and build cool stuff. The previous repository got a little messy, so we're starting from scratch because we love tech! And now, FROM THE ORIGINAL CREATOR...
 
 Solid State by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
-FROM HEARING COLORS:
-
-We're reverse engineering and using this template to redesign and relaunch our website hearingcolors.com so as to remove our reliance on WordPress. The previous repository got a little messy, so we removed it, and decided to start from scratch to try and keep a cleaner repository.
-
-#ff6347, #ffa500, #ffd700, #2e8b57, #00ced1, #3498DB, #8A2BE2
-
-
-FROM THE ORIGINAL CREATOR:
 
 After a somewhat extended break from HTML5 UP (to work on a secret-ish new project --
 more on that later!) I'm back with a brand new design: Solid State, a slick new multi-
