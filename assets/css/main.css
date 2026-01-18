@@ -100,13 +100,11 @@ input, select, textarea {
 
 	body {
 		background-color: #000000;
-		background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg");
-		background-size: auto,
- cover;
-		background-attachment: fixed,
- fixed;
-		background-position: center,
- center;
+		background-image: url("../../images/brand/hearingcolors.png");
+		background-size: contain;
+		background-position: center, center;
+		background-attachment: fixed, fixed;
+		background-repeat: no-repeat;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3465,12 +3463,10 @@ input, select, textarea {
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #000000;
-				background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg");
-				background-size: auto,
- cover;
-				background-position: center,
- center;
+				/* background-color: #000000; */
+				/* background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg"); */
+				background-size: auto, cover;
+				background-position: center, center;
 				margin-bottom: -6.5em;
 			}
 
@@ -3578,11 +3574,9 @@ input, select, textarea {
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #000000;
-			background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg");
-			background-size: auto,
- cover;
-			background-position: center,
- 0% 30%;
+			/* background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg"); */
+			background-size: auto, cover;
+			background-position: center, 0% 30%;
 			margin-bottom: -6.5em;
 		}
 
@@ -3678,6 +3672,7 @@ input, select, textarea {
 			-webkit-transform: scaleY(-1) scaleX(-1);
 			-ms-transform: scaleY(-1) scaleX(-1);
 			transform: scaleY(-1) scaleX(-1);
+			background-color: #000000cf;
 		}
 
 		.wrapper .inner {
@@ -4023,6 +4018,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 auto;
 		width: 55em;
+		background-color: #000000cf;
 	}
 
 		#footer .inner > * {
@@ -4070,12 +4066,10 @@ input, select, textarea {
 	@media screen and (max-width: 1280px) {
 
 		#footer {
-			background-color: #000000;
-			background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg");
-			background-size: auto,
- cover;
-			background-position: center,
- center;
+			background-color: #000000cf;
+			/* background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg"); */
+			background-size: auto, cover;
+			background-position: center, center;
 			margin-top: -6.5em;
 			padding-top: 6.5em;
 		}
@@ -4153,4 +4147,16 @@ input, select, textarea {
 			padding: 2em 1.5em 0.1em 1.5em ;
 		}
 
+	}
+
+	/* USER ADDED CSS */
+
+	#about {
+		margin-top: 100vh;
+	}
+
+	#header h1 a img {
+		max-width: 90%;
+		height: 3.5em;
+		display: block;
 	}
