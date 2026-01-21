@@ -183,7 +183,7 @@ input, select, textarea {
 			color: #ffffff !important;
 		}
 
-		a.special:not(.button) {
+		a.special:not(.button), .special:not(.button) {
 			text-decoration: none;
 			border-bottom: 0;
 			display: block;
@@ -195,7 +195,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-			a.special:not(.button):before {
+			a.special:not(.button):before, .special:not(.button):before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				display: inline-block;
@@ -208,7 +208,7 @@ input, select, textarea {
 				font-weight: 900;
 			}
 
-			a.special:not(.button):before {
+			a.special:not(.button):before, .special:not(.button):before {
 				-moz-transition: background-color 0.2s ease-in-out;
 				-webkit-transition: background-color 0.2s ease-in-out;
 				-ms-transition: background-color 0.2s ease-in-out;
@@ -227,11 +227,11 @@ input, select, textarea {
 				width: 2em;
 			}
 
-			a.special:not(.button):hover:before {
+			a.special:not(.button):hover:before, .special:not(.button):hover:before {
 				background-color: rgba(255, 255, 255, 0.025);
 			}
 
-			a.special:not(.button):active:before {
+			a.special:not(.button):active:before, .special:not(.button):active:before {
 				background-color: rgba(255, 255, 255, 0.075);
 			}
 
@@ -4160,3 +4160,277 @@ input, select, textarea {
 		height: 3.5em;
 		display: block;
 	}
+
+	.more-content {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: max-height 0.4s ease, opacity 0.3s ease;
+	}
+
+	.more-content.show {
+		max-height: 100%; /* adjust if needed */
+		opacity: 1;
+	}
+
+	button.special {
+		box-shadow: none;
+		border-radius: 0;
+		height: auto;
+		line-height: normal;
+		padding: 0;
+	}
+
+	#about .js-more-toggle, #licensing .js-more-toggle {
+		margin-left: auto;
+		width: fit-content;
+	}
+
+	#about .js-more-toggle:before, #licensing .js-more-toggle:before {
+		margin-right: 0.5em;
+	}
+
+	/* Music swiper inside "More" content */
+	#more-music .music-swiper {
+	width: 100%;
+	/* max-width: 100%; */
+	margin: 1rem auto 0;
+	padding: 0.25rem 0 2rem; /* leave room for pagination dots */
+	}
+
+	#more-music .music-slide {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-content: center;
+	border-radius: 12px;
+	padding: 1.25rem 1.25rem;
+	}
+
+	#more-music .music-slide h3 {
+	margin: 0;
+	}
+
+	#more-music .music-slide p {
+	margin: 0;
+	line-height: 1.5;
+	}
+
+	/* Pagination positioning */
+	#more-music .swiper-pagination {
+	bottom: 0;
+	}
+
+	/* Swiper pagination – Hearing Colors style */
+	#more-music .swiper-pagination {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	}
+
+	#more-music .swiper-pagination-bullet {
+	width: 5px;
+	height: 5px;
+	background: rgba(255, 255, 255, 0.35);
+	border-radius: 50%;
+	opacity: 1; /* override Swiper default */
+	transition: transform 0.25s ease, background-color 0.25s ease;
+	}
+
+	#more-music .swiper-pagination-bullet:hover {
+	transform: scale(1);
+	}
+
+	#more-music .swiper-pagination-bullet-active {
+	background: #ffffff;
+	transform: scale(1.15);
+	}
+
+#more-music .swiper {
+  overflow: hidden;
+  border-radius: 12px;
+  width: 66%;
+  height: 240px;
+}
+
+#more-music .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch;
+}
+
+#more-music .swiper-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 12px;
+}
+
+#more-music .swiper-slide h3 {
+	text-align: center;
+}
+
+#more-music .swiper-slide p {
+	/* padding-left: 42%; */
+	text-align: center;
+}
+
+#more-music .swiper-slide a {
+	text-align: center;
+}
+
+#more-music #lic-slide1 p {
+	text-align: center;
+	padding-left: 0%;
+}
+
+#more-music .music-slide {
+  box-sizing: border-box;
+}
+
+#more-music .swiper-slide:nth-child(1n) {
+      background-color: #E53935;
+    }
+
+#more-music .swiper-slide:nth-child(2n) {
+      background-color: #FB8C00;
+    }
+
+#more-music .swiper-slide:nth-child(3n) {
+      background-color: #FDD835;
+    }
+
+#more-music .swiper-slide:nth-child(4n) {
+      background-color: #43A047;
+    }
+
+	/* Licensing swiper inside "More" content */
+	#more-licensing .licensing-swiper {
+	width: 100%;
+	/* max-width: 100%; */
+	margin: 1rem auto 0;
+	padding: 0.25rem 0 2rem; /* leave room for pagination dots */
+	}
+
+	#more-licensing .licensing-slide {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-content: center;
+	border-radius: 12px;
+	padding: 1.25rem 1.25rem;
+	}
+
+	#more-licensing .licensing-slide h3 {
+	margin: 0;
+	}
+
+	#more-licensing .licensing-slide p {
+	margin: 0;
+	line-height: 1.5;
+	}
+
+	/* Pagination positioning */
+	#more-licensing .swiper-pagination {
+	bottom: 0;
+	}
+
+	/* Swiper pagination – Hearing Colors style */
+	#more-licensing .swiper-pagination {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	}
+
+	#more-licensing .swiper-pagination-bullet {
+	width: 5px;
+	height: 5px;
+	background: rgba(255, 255, 255, 0.35);
+	border-radius: 50%;
+	opacity: 1; /* override Swiper default */
+	transition: transform 0.25s ease, background-color 0.25s ease;
+	}
+
+	#more-licensing .swiper-pagination-bullet:hover {
+	transform: scale(1);
+	}
+
+	#more-licensing .swiper-pagination-bullet-active {
+	background: #ffffff;
+	transform: scale(1.15);
+	}
+
+#more-licensing .swiper {
+  overflow: hidden;
+  border-radius: 12px;
+  width: 66%;
+  height: 240px;
+}
+
+#more-licensing .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch;
+}
+
+#more-licensing .swiper-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 12px;
+}
+
+#more-licensing .swiper-slide h3 {
+	text-align: center;
+}
+
+#more-licensing .swiper-slide p {
+	/* padding-left: 42%; */
+	text-align: center;
+}
+
+#more-licensing .swiper-slide a {
+	text-align: center;
+}
+
+#more-licensing #lic-slide1 p {
+	text-align: center;
+	padding-left: 0%;
+}
+
+#more-licensing .licensing-slide {
+  box-sizing: border-box;
+}
+
+#more-licensing .swiper-slide:nth-child(1n) {
+      background-color: #43A047;
+    }
+
+#more-licensing .swiper-slide:nth-child(2n) {
+      background-color: #26C6DA;
+    }
+
+#more-licensing .swiper-slide:nth-child(3n) {
+      background-color: #1E88E5;
+    }
+
+#more-licensing .swiper-slide:nth-child(4n) {
+      background-color: #8E24AA;
+    }
+
+#artists .artists-tagline {
+  text-align: center;
+  /* margin-top: 2rem; */
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 0.85;
+}
