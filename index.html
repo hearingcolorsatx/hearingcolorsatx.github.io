@@ -30,12 +30,11 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="#">Home</a></li>
+								<li><a href="#about">About</a></li>
 								<li><a href="#music">Music</a></li>
 								<li><a href="#licensing">Licensing</a></li>
 								<li><a href="#artists">Artists</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<li><a href="#about">About</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -59,9 +58,15 @@
 									<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a> -->
 									<div class="content">
 										<h2 class="major">Hearing Colors</h2>
-										<p>Art-forward music for picture, story and sync.<br>
-										Independent, artist-owned catalog built for film, advertising, and modern media.</p>
-										<a href="#" class="special">Learn more</a>
+										<p>Art-forward music for picture, story and sync.</p>
+										<button class="special js-more-toggle" data-target="#more-about" data-section="#about" aria-expanded="false" type="button">
+											More
+										</button>
+										<div class="more-content" id="more-about">
+											<p>Independent, artist-owned catalog built for film, advertising, and modern media.</p>
+											<p>***EXPANDED BIO COMING SOON***</p>
+											<p>Music should serve the story, not distract from it.</p>
+										</div>
 									</div>
 								</div>
 							</section>
@@ -94,46 +99,37 @@
 							<section id="artists" class="wrapper alt style1">
 								<div class="inner">
 									<h2 class="major">Arists</h2>
-									<p>Our music is made possible by our artists.</p>
+									<p>The music we provide is made possible by our artists.</p>
 									<section class="features">
 										<article>
 											<!-- <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a> -->
 											<h3 class="major">Tim Delaney</h3>
 											<p>Artist and producer from Austintonio, TX.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="https://timdelaneymusic.com" class="special">Visit Site</a>
 										</article>
 										<article>
 											<!-- <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a> -->
 											<h3 class="major">neutron squared</h3>
 											<p>Character-driven production identity.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="https://neutronsquared.com" class="special">Visit Site</a>
 										</article>
-										<!-- <article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article> -->
 									</section>
-									<ul class="actions">
+									    <p class="artists-tagline">
+											If you're telling a story, we care how it feels.
+										</p>
+									<!-- <ul class="actions">
 										<li><a href="#" class="button">Browse All</a></li>
-									</ul>
+									</ul> -->
 								</div>
 							</section>
-
 					</section>
 
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Contact Us</h2>
-							<p>Use the form below to get in touch.</p>
+							<p>Looking for music that feels intentional?<br>
+							Use the form below to get in touch.</p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -153,14 +149,14 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-							<ul class="contact">
+							<!-- <ul class="contact">
 								<li class="icon solid fa-home">
 									Hearing Colors LLC<br />
 									PO Box<br />
 									Austintonio, TX 51210
 								</li>
 								<li class="icon solid fa-phone">512-123-4567</li>
-							</ul>
+							</ul> -->
 							<ul class="copyright">
 								<li>&copy; Hearing Colors LLC. All rights reserved.</li>
 							</ul>
@@ -176,6 +172,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
