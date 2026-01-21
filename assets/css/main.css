@@ -3676,7 +3676,7 @@ input, select, textarea {
 			-webkit-transform: scaleY(-1) scaleX(-1);
 			-ms-transform: scaleY(-1) scaleX(-1);
 			transform: scaleY(-1) scaleX(-1);
-			background-color: #000000cf;
+			background-color: #000000ef;
 		}
 
 		.wrapper .inner {
@@ -4034,7 +4034,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 auto;
 		width: 55em;
-		background-color: #000000cf;
+		background-color: #000000ef;
 	}
 
 		#footer .inner > * {
@@ -4082,7 +4082,7 @@ input, select, textarea {
 	@media screen and (max-width: 1280px) {
 
 		#footer {
-			background-color: #000000cf;
+			background-color: #000000ef;
 			/* background-image: linear-gradient(to top, #000000, #000000), url("../../images/bg.jpg"); */
 			background-size: auto, cover;
 			background-position: center, center;
