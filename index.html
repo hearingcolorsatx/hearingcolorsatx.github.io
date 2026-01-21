@@ -241,8 +241,8 @@
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Contact Us</h2>
-							<p>Looking for music that feels intentional?<br>
-							Use the form below to get in touch.</p>
+							<p>Looking for music that feels intentional?</p>
+							<p>Use the form below to get in touch.</p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -262,16 +262,12 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-							<!-- <ul class="contact">
-								<li class="icon solid fa-home">
-									Hearing Colors LLC<br />
-									PO Box<br />
-									Austintonio, TX 51210
-								</li>
-								<li class="icon solid fa-phone">512-123-4567</li>
-							</ul> -->
 							<ul class="copyright">
-								<li>&copy; Hearing Colors LLC. All rights reserved.</li>
+								<li>&copy; 2019 - <span id="currentYear"></span> Hearing Colors LLC. All rights reserved.</li>
+								<script>
+								const currentYear = new Date().getFullYear();
+								document.getElementById('currentYear').textContent = currentYear;
+								</script>
 							</ul>
 						</div>
 					</section>
