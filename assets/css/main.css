@@ -100,9 +100,9 @@ input, select, textarea {
 
 	body {
 		background-color: #000000;
-		background-image: url("../../images/brand/hearingcolors.png");
+		background-image: url("../../images/brand/Hearing Colors.jpg");
 		background-size: contain;
-		background-position: center, center;
+		background-position: bottom center;
 		background-attachment: fixed, fixed;
 		background-repeat: no-repeat;
 	}
@@ -3624,8 +3624,12 @@ input, select, textarea {
 		position: relative;
 	}
 
-		.wrapper:before, .wrapper:after {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23000000%3B' /%3E%3C/svg%3E");
+		.wrapper:before {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%238E24AA%3B' /%3E%3C/svg%3E");
+		}
+
+		.wrapper:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23E53935%3B' /%3E%3C/svg%3E");
 		}
 
 		.wrapper:before {
@@ -3765,8 +3769,12 @@ input, select, textarea {
 			background-color: #000000;
 		}
 
-			.wrapper.spotlight:before, .wrapper.spotlight:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23000000%3B' /%3E%3C/svg%3E");
+			.wrapper.spotlight:before {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23E53935%3B' /%3E%3C/svg%3E");
+			}
+
+			.wrapper.spotlight:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23FB8C00%3B' /%3E%3C/svg%3E");
 			}
 
 			.wrapper.spotlight:before {
@@ -3826,8 +3834,12 @@ input, select, textarea {
 				background-color: #000000;
 			}
 
-				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23000000%3B' /%3E%3C/svg%3E");
+				.wrapper.spotlight.style2:before {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23FDD835%3B' /%3E%3C/svg%3E");
+				}
+
+				.wrapper.spotlight.style2:after {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2343A047%3B' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style2:before {
@@ -3842,8 +3854,12 @@ input, select, textarea {
 				background-color: #000000;
 			}
 
-				.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23000000%3B' /%3E%3C/svg%3E");
+				.wrapper.spotlight.style3:before {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2326C6DA%3B' /%3E%3C/svg%3E");
+				}
+
+				.wrapper.spotlight.style3:after {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%231E88E5%3B' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style3:before {
