@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 	</head>
 	<body class="is-preload">
 
@@ -77,8 +79,49 @@
 									<!-- <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a> -->
 									<div class="content">
 										<h2 class="major">Music</h2>
-										<p>Looking for music that feels intentional? If you're telling a story, we care how it feels.</p>
-										<a href="#" class="special">Learn more</a>
+										<p>Music that works on screen.</p>
+										<button class="special js-more-toggle" data-target="#more-music" data-section="#music" aria-expanded="false" type="button">
+											More
+										</button>
+										<div class="more-content" id="more-music">
+										<!-- Swiper -->
+										<div class="swiper mySwiper3 music-swiper" aria-label="Music details carousel">
+											<div class="swiper-wrapper">
+
+											<!-- Slide 1 -->
+											<section class="swiper-slide music-slide" id="mus-slide1">
+												<h3>Music For</h3>
+												<p>Film & Television<br>
+												Advertising & Brand<br>
+												Digital / Editorial / Games</p>
+											</section>
+											
+											<!-- Slide 2 -->
+											<section class="swiper-slide music-slide">
+												<h3>Use Case Filters</h3>
+												<p>Coming Soon!</p>
+											</section>
+
+											<!-- Slide 3 -->
+											<section class="swiper-slide music-slide">
+												<h3>Samples</h3>
+												<p>Coming Soon!</p>
+											</section>
+
+											<!-- Slide 4 -->
+											<!-- <section class="swiper-slide music-slide">
+												<h3>Licensing spec sheet</h3>
+												<a href="https://collection.cloudinary.com/dw5m4wus8/0b841de00a4bbaeb6bade274cdf0e848">
+													Click here for PDF with quick terms, deliverables, and contact instructions.
+												</a>
+											</section> -->
+
+											</div>
+
+											<!-- Optional: dots -->
+											<div class="swiper-pagination"></div>
+										</div>
+										</div>
 									</div>
 								</div>
 							</section>
@@ -90,7 +133,77 @@
 									<div class="content">
 										<h2 class="major">Licensing</h2>
 										<p>Hearing Colors offers artist-owned music with fast clearance and flexible licensing for visual media.</p>
-										<a href="#" class="special">Learn more</a>
+										<button class="special js-more-toggle" data-target="#more-licensing" data-section="#licensing" aria-expanded="false" type="button">
+												More
+										</button>
+										<div class="more-content" id="more-licensing">
+										<!-- Swiper -->
+										<div class="swiper mySwiper3 licensing-swiper" aria-label="Licensing details carousel">
+											<div class="swiper-wrapper">
+
+											<!-- Slide 1 -->
+											<section class="swiper-slide licensing-slide" id="lic-slide1">
+												<p>One-stop, artist-owned<br>
+												Fast turnaround<br>
+												Pre-cleared where applicable</p>
+											</section>
+
+											<!-- Slide 2 -->
+											<section class="swiper-slide licensing-slide">
+												<h3>We license</h3>
+												<p>
+												Instrumentals<br>
+												Vocal tracks<br>
+												Custom compositions
+												</p>
+											</section>
+
+											<!-- Slide 3 -->
+											<section class="swiper-slide licensing-slide">
+												<h3>How it works</h3>
+												<p>
+												1. Inquiry<br>
+												2. Quote &amp; terms<br>
+												3. License issued<br>
+												4. Delivery
+												</p>
+											</section>
+
+											<!-- Slide 4 -->
+											<section class="swiper-slide licensing-slide">
+												<h3>Licensing spec sheet</h3>
+												<a href="https://collection.cloudinary.com/dw5m4wus8/0b841de00a4bbaeb6bade274cdf0e848">
+													Click here for PDF with quick terms, deliverables, and contact instructions.
+												</a>
+											</section>
+
+											</div>
+
+											<!-- Optional: dots -->
+											<div class="swiper-pagination"></div>
+										</div>
+										</div>
+											<script>
+											// Swiper 3: creative effect (your "mySwiper3" config)
+											const licensingSwiper = new Swiper(".mySwiper3", {
+												grabCursor: true,
+												effect: "creative",
+												creativeEffect: {
+												prev: { shadow: true, translate: ["-20%", 0, -1] },
+												next: { translate: ["100%", 0, 0] },
+												},
+
+												// Nice-to-haves
+												slidesPerView: 1,
+												spaceBetween: 16,
+												autoHeight: true,
+												pagination: {
+												el: ".mySwiper3 .swiper-pagination",
+												clickable: true,
+												},
+											});
+											</script>
+
 									</div>
 								</div>
 							</section>
