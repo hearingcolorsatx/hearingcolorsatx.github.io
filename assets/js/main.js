@@ -142,4 +142,59 @@
 
 			});
 
+// USER ADDED CODE BELOW
+
+// Learn More Buttion Functionality
+
+	// document.addEventListener("DOMContentLoaded", function () {
+	// 	const licensingSwiper = new Swiper(".mySwiper3", {
+	// 		grabCursor: true,
+	// 		effect: "creative",
+	// 		creativeEffect: {
+	// 		prev: { shadow: true, translate: ["-20%", 0, -1] },
+	// 		next: { translate: ["100%", 0, 0] },
+	// 		},
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 1,
+	// 		autoHeight: true,
+	// 		pagination: {
+	// 		el: ".mySwiper3 .swiper-pagination",
+	// 		clickable: true,
+	// 		},
+	// 	});
+	// });
+
+	const toggles = document.querySelectorAll(".js-more-toggle");
+
+	toggles.forEach((toggle) => {
+		toggle.addEventListener("click", () => {
+		const targetSel = toggle.getAttribute("data-target");
+		const sectionSel = toggle.getAttribute("data-section");
+
+		const content = targetSel ? document.querySelector(targetSel) : null;
+		const section = sectionSel ? document.querySelector(sectionSel) : null;
+
+		if (!content) return;
+
+		const isExpanded = content.classList.toggle("show");
+
+		toggle.textContent = isExpanded ? "Less" : "More";
+		toggle.setAttribute("aria-expanded", String(isExpanded));
+
+		// ✅ If we just opened the licensing panel, refresh Swiper after layout updates
+		if (isExpanded && targetSel === "#more-licensing") {
+		setTimeout(() => {
+			licensingSwiper.update();
+			licensingSwiper.slideTo(0, 0);
+		}, 150);
+		}
+
+
+		if (!isExpanded && section) {
+			section.scrollIntoView({ behavior: "smooth", block: "start" });
+		}
+		});
+	});
+	
+
 })(jQuery);
