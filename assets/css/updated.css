@@ -3858,7 +3858,6 @@ input, select, textarea {
 
 			.wrapper.spotlight.style3 {
 				background-color: #000000;
-				background-image: url('https://res.cloudinary.com/dw5m4wus8/video/upload/v1769229129/01_pyltyu.mp4');
 			}
 
 				.wrapper.spotlight.style3:before {
@@ -4211,7 +4210,7 @@ input, select, textarea {
 		margin-left: auto;
 		width: fit-content;
 	}
-
+	
 	#about .js-more-toggle:before, #licensing .js-more-toggle:before {
 		margin-right: 0.5em;
 	}
@@ -4307,28 +4306,28 @@ input, select, textarea {
 
 	/* Licensing swiper inside "More" content */
 	#more-licensing .licensing-swiper {
-		width: 100%;
-		/* max-width: 100%; */
-		margin: 1rem auto 0;
-		padding: 0.25rem 0 2rem; /* leave room for pagination dots */
+	width: 100%;
+	/* max-width: 100%; */
+	margin: 1rem auto 0;
+	padding: 0.25rem 0 2rem; /* leave room for pagination dots */
 	}
 
 	#more-licensing .licensing-slide {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		align-content: center;
-		border-radius: 12px;
-		padding: 1.25rem 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-content: center;
+	border-radius: 12px;
+	padding: 1.25rem 1.25rem;
 	}
 
 	#more-licensing .licensing-slide h3 {
-		margin: 0;
+	margin: 0;
 	}
 
 	#more-licensing .licensing-slide p {
-		margin: 0;
-		line-height: 1.5;
+	margin: 0;
+	line-height: 1.5;
 	}
 
 	/* Pagination positioning */
@@ -4363,8 +4362,8 @@ input, select, textarea {
 
 	#more-music .swiper-pagination-bullet-active, 
 	#more-licensing .swiper-pagination-bullet-active {
-		background: #ffffff;
-		transform: scale(1.15);
+	background: #ffffff;
+	transform: scale(1.15);
 	}
 
 #more-licensing .swiper {
@@ -4402,10 +4401,6 @@ input, select, textarea {
 
 #more-licensing .swiper-slide a {
 	text-align: center;
-	border-bottom: none;
-    color: #ffffff;
-	text-decoration-thickness: 0.1em;
-    text-decoration:underline;
 }
 
 #more-licensing #lic-slide1 p {
@@ -4614,4 +4609,5 @@ input, select, textarea {
 			font-size: 14pt;
 			font-weight: normal;			
 		}
+
 	}
