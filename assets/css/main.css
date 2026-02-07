@@ -269,6 +269,7 @@ input, select, textarea {
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+			padding-top: 2em;
 			padding-bottom: 1em;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 		}
@@ -3640,11 +3641,11 @@ input, select, textarea {
 		}
 
 		.wrapper:before {
-			box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+			/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 		}
 
 		.wrapper:after {
-			box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+			/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 		}
 
 		.wrapper:before, .wrapper:after {
@@ -3701,11 +3702,11 @@ input, select, textarea {
 			}
 
 			.wrapper.style2:before {
-				box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+				/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 			}
 
 			.wrapper.style2:after {
-				box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+				/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 			}
 
 		.wrapper.style3 {
@@ -3717,11 +3718,11 @@ input, select, textarea {
 			}
 
 			.wrapper.style3:before {
-				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
+				/* box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051; */
 			}
 
 			.wrapper.style3:after {
-				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
+				/* box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051; */
 			}
 
 		.wrapper.style4 {
@@ -3785,11 +3786,11 @@ input, select, textarea {
 			}
 
 			.wrapper.spotlight:before {
-				box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+				/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 			}
 
 			.wrapper.spotlight:after {
-				box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+				/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 			}
 
 			.wrapper.spotlight .inner {
@@ -3805,6 +3806,8 @@ input, select, textarea {
 				-webkit-flex-direction: row;
 				-ms-flex-direction: row;
 				flex-direction: row;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
 			}
 
 			.wrapper.spotlight .image {
@@ -3850,11 +3853,11 @@ input, select, textarea {
 				}
 
 				.wrapper.spotlight.style2:before {
-					box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+					/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 				}
 
 				.wrapper.spotlight.style2:after {
-					box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+					/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 				}
 
 			.wrapper.spotlight.style3 {
@@ -3871,11 +3874,11 @@ input, select, textarea {
 				}
 
 				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+					/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 				}
 
 				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000;
+					/* box-shadow: inset 0 -1px 0 0 #000000, 0 1px 0 0 #000000; */
 				}
 
 			.wrapper.spotlight.style4 {
@@ -4221,45 +4224,45 @@ input, select, textarea {
 	}
 
 	/* Music swiper inside "More" content */
-	#more-music .music-swiper {
+	#music .music-swiper {
 	width: 100%;
 	/* max-width: 100%; */
-	margin: 1rem auto 0;
-	padding: 0.25rem 0 2rem; /* leave room for pagination dots */
+	/* margin: 1rem auto 0; */
+	/* padding: 0.25rem 0 2rem; */ /* leave room for pagination dots */
 	}
 
-	#more-music .music-slide {
+	#music .music-slide {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
 	align-content: center;
-	border-radius: 12px;
-	padding: 1.25rem 1.25rem;
+	/* border-radius: 12px; */
+	/* padding: 1.25rem 1.25rem; */
 	}
 
-	#more-music .music-slide h3 {
+	#music .music-slide h3 {
 	margin: 0;
 	}
 
-	#more-music .music-slide p {
+	#music .music-slide p {
 	margin: 0;
 	line-height: 1.5;
 	}
 
 
-#more-music .swiper {
+#music .swiper {
   overflow: hidden;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   width: 66%;
   height: 240px;
 }
 
-#more-music .swiper-wrapper {
+#music .swiper-wrapper {
   display: flex !important;
   align-items: stretch;
 }
 
-#more-music .swiper-slide {
+#music .swiper-slide {
   flex: 0 0 100% !important;
   width: 100% !important;
   height: auto;
@@ -4268,89 +4271,90 @@ input, select, textarea {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
-#more-music .swiper-slide h3 {
+#music .swiper-slide h3 {
 	text-align: center;
 }
 
-#more-music .swiper-slide p {
+#music .swiper-slide p {
 	/* padding-left: 42%; */
 	text-align: center;
 }
 
-#more-music .swiper-slide a {
+#music .swiper-slide a {
 	text-align: center;
 }
 
-#more-music #lic-slide1 p {
+#music #lic-slide1 p {
 	text-align: center;
 	padding-left: 0%;
 }
 
-#more-music .music-slide {
+#music .music-slide {
   box-sizing: border-box;
 }
 
-#more-music .swiper-slide:nth-child(1n) {
-      background-color: #E53935;
+#music .swiper-slide:nth-child(1n) {
+      /* background-color: #E53935; */
+	  background-color: #000000;
     }
 
-#more-music .swiper-slide:nth-child(2n) {
+#music .swiper-slide:nth-child(2n) {
       background-color: #FB8C00;
     }
 
-#more-music .swiper-slide:nth-child(3n) {
+#music .swiper-slide:nth-child(3n) {
       background-color: #FDD835;
     }
 
-#more-music .swiper-slide:nth-child(4n) {
+#music .swiper-slide:nth-child(4n) {
       background-color: #43A047;
     }
 
 	/* Licensing swiper inside "More" content */
-	#more-licensing .licensing-swiper {
+	#licensing .licensing-swiper {
 		width: 100%;
 		/* max-width: 100%; */
-		margin: 1rem auto 0;
-		padding: 0.25rem 0 2rem; /* leave room for pagination dots */
+		/* margin: 1rem auto 0; */
+		/* padding: 0.25rem 0 2rem; */ /* leave room for pagination dots */
 	}
 
-	#more-licensing .licensing-slide {
+	#licensing .licensing-slide {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
 		align-content: center;
-		border-radius: 12px;
+		/* border-radius: 12px; */
 		padding: 1.25rem 1.25rem;
 	}
 
-	#more-licensing .licensing-slide h3 {
+	#licensing .licensing-slide h3 {
 		margin: 0;
 	}
 
-	#more-licensing .licensing-slide p {
+	#licensing .licensing-slide p {
 		margin: 0;
 		line-height: 1.5;
 	}
 
 	/* Pagination positioning */
-	#more-music .swiper-pagination,
-	#more-licensing .swiper-pagination {
+	#music .swiper-pagination,
+	#licensing .swiper-pagination {
 		bottom: 0;
 	}
 
 	/* Swiper pagination – Hearing Colors style */
-	#more-music .swiper-pagination,
-	#more-licensing .swiper-pagination {
+	#music .swiper-pagination,
+	#licensing .swiper-pagination {
 		display: flex;
 		justify-content: center;
 		gap: 0.5rem;
 	}
 
-	#more-music .swiper-pagination-bullet,
-	#more-licensing .swiper-pagination-bullet {
+	#music .swiper-pagination-bullet,
+	#licensing .swiper-pagination-bullet {
 		width: 5px;
 		height: 5px;
 		background: rgba(255, 255, 255, 0.35);
@@ -4360,30 +4364,30 @@ input, select, textarea {
 		transition: transform 0.25s ease, background-color 0.25s ease;
 	}
 
-	#more-music .swiper-pagination-bullet:hover, 
-	#more-licensing .swiper-pagination-bullet:hover {
+	#music .swiper-pagination-bullet:hover, 
+	#licensing .swiper-pagination-bullet:hover {
 		transform: scale(1);
 	}
 
-	#more-music .swiper-pagination-bullet-active, 
-	#more-licensing .swiper-pagination-bullet-active {
+	#music .swiper-pagination-bullet-active, 
+	#licensing .swiper-pagination-bullet-active {
 		background: #ffffff;
 		transform: scale(1.15);
 	}
 
-#more-licensing .swiper {
+#licensing .swiper {
   overflow: hidden;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   width: 66%;
-  height: 240px;
+  height: 33vh;
 }
 
-#more-licensing .swiper-wrapper {
+#licensing .swiper-wrapper {
   display: flex !important;
   align-items: stretch;
 }
 
-#more-licensing .swiper-slide {
+#licensing .swiper-slide {
   flex: 0 0 100% !important;
   width: 100% !important;
   height: auto;
@@ -4392,19 +4396,19 @@ input, select, textarea {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
-#more-licensing .swiper-slide h3 {
+#licensing .swiper-slide h3 {
 	text-align: center;
 }
 
-#more-licensing .swiper-slide p {
+#licensing .swiper-slide p {
 	/* padding-left: 42%; */
 	text-align: center;
 }
 
-#more-licensing .swiper-slide a {
+#licensing .swiper-slide a {
 	text-align: center;
 	border-bottom: none;
     color: #ffffff;
@@ -4412,37 +4416,36 @@ input, select, textarea {
     text-decoration:underline;
 }
 
-#more-licensing #lic-slide1 p {
+#licensing #lic-slide1 p {
 	text-align: center;
 	padding-left: 0%;
 }
 
-#more-licensing .licensing-slide {
+#licensing .licensing-slide {
   box-sizing: border-box;
 }
 
-#more-licensing .swiper-slide:nth-child(1n) {
-      background-color: #43A047;
+#licensing .swiper-slide:nth-child(1n) {
+      background-color: #000000;
+      /* background-color: #43A047; */
     }
 
-#more-licensing .swiper-slide:nth-child(2n) {
+#licensing .swiper-slide:nth-child(2n) {
       background-color: #26C6DA;
     }
 
-#more-licensing .swiper-slide:nth-child(3n) {
+#licensing .swiper-slide:nth-child(3n) {
       background-color: #1E88E5;
     }
 
-#more-licensing .swiper-slide:nth-child(4n) {
+#licensing .swiper-slide:nth-child(4n) {
       background-color: #8E24AA;
     }
 
 #artists .artists-tagline {
   text-align: center;
-  /* margin-top: 2rem; */
-  font-style: italic;
   font-weight: normal;
-  font-size: 12pt;
+  font-size: 14pt;
   opacity: 0.85;
 }
 
@@ -4466,15 +4469,15 @@ input, select, textarea {
 			z-index: -10;
 		}
 
-		#more-music .swiper, #more-licensing .swiper {
+		#music .swiper, #licensing .swiper {
 			overflow: hidden;
-			border-radius: 12px;
+			/* border-radius: 12px; */
 			width: 100%;
 			height: 240px;
 		}
 
-		#more-music .swiper-slide p, #more-licensing .swiper-slide p,
-		#more-music .swiper-slide a, #more-licensing .swiper-slide a  { 
+		#music .swiper-slide p, #licensing .swiper-slide p,
+		#music .swiper-slide a, #licensing .swiper-slide a  { 
 			font-size: 14pt;
 			font-weight: normal;			
 		}
@@ -4501,15 +4504,15 @@ input, select, textarea {
 			z-index: -10; 
 		}
 
-		#more-music .swiper, #more-licensing .swiper {
+		#music .swiper, #licensing .swiper {
 			overflow: hidden;
-			border-radius: 12px;
+			/* border-radius: 12px; */
 			width: 100%;
 			height: 240px;
 		}
 
-		#more-music .swiper-slide p, #more-licensing .swiper-slide p,
-		#more-music .swiper-slide a, #more-licensing .swiper-slide a  { 
+		#music .swiper-slide p, #licensing .swiper-slide p,
+		#music .swiper-slide a, #licensing .swiper-slide a  { 
 			font-size: 14pt;
 			font-weight: normal;			
 		}
@@ -4536,15 +4539,15 @@ input, select, textarea {
 			z-index: -10; 
 		}
 
-		#more-music .swiper, #more-licensing .swiper {
+		#music .swiper, #licensing .swiper {
 			overflow: hidden;
-			border-radius: 12px;
+			/* border-radius: 12px; */
 			width: 100%;
 			height: 240px;
 		}
 
-		#more-music .swiper-slide p, #more-licensing .swiper-slide p,
-		#more-music .swiper-slide a, #more-licensing .swiper-slide a  { 
+		#music .swiper-slide p, #licensing .swiper-slide p,
+		#music .swiper-slide a, #licensing .swiper-slide a  { 
 			font-size: 14pt;
 			font-weight: normal;			
 		}
@@ -4571,15 +4574,15 @@ input, select, textarea {
 			z-index: -10; 
 		}
 
-		#more-music .swiper, #more-licensing .swiper {
+		#music .swiper, #licensing .swiper {
 			overflow: hidden;
-			border-radius: 12px;
+			/* border-radius: 12px; */
 			width: 100%;
 			height: 240px;
 		}
 
-		#more-music .swiper-slide p, #more-licensing .swiper-slide p,
-		#more-music .swiper-slide a, #more-licensing .swiper-slide a  { 
+		#music .swiper-slide p, #licensing .swiper-slide p,
+		#music .swiper-slide a, #licensing .swiper-slide a  { 
 			font-size: 14pt;
 			font-weight: normal;			
 		}
@@ -4606,15 +4609,15 @@ input, select, textarea {
 			z-index: -10; 
 		}
 
-		#more-music .swiper, #more-licensing .swiper {
+		#music .swiper, #licensing .swiper {
 			overflow: hidden;
-			border-radius: 12px;
+			/* border-radius: 12px; */
 			width: 100%;
 			height: 240px;
 		}
 
-		#more-music .swiper-slide p, #more-licensing .swiper-slide p,
-		#more-music .swiper-slide a, #more-licensing .swiper-slide a { 
+		#music .swiper-slide p, #licensing .swiper-slide p,
+		#music .swiper-slide a, #licensing .swiper-slide a { 
 			font-size: 14pt;
 			font-weight: normal;			
 		}
@@ -4628,3 +4631,77 @@ input, select, textarea {
 		background-size: cover;
 	}
 
+	#music, #licensing {
+		min-height: 50vh;     /* tweak: 60–80vh usually feels right */
+		position: relative;   /* keeps template pseudo-elements happy */
+	}
+
+	#music h2.major, #licensing h2.major {
+		text-decoration-thickness: 0em;
+		border-bottom: none;
+		padding-bottom: 0em;
+	}
+
+	#music h2, #licensing h2 {
+		color: #ffffff;
+		font-family: Raleway, Helvetica, sans-serif;
+		font-weight: 700;
+		letter-spacing: 0em;
+		margin: 0 0 0 0;
+		padding-top: 0;
+		text-transform: uppercase;	
+	}
+
+	#music .inner,
+	#music .content,
+	#licensing .inner,
+	#licensing .content {
+		height: 100%;
+		width: 100%;
+	}
+
+	#music .music-swiper,
+	#licensing .licensing-swiper {
+		width: 100%;
+		max-width: 100%;
+		display: block;
+		/* size: cover; */
+	}
+
+	#music .music-swiper,
+	#licensing .licensing-swiper {
+		overflow: hidden;
+	}
+
+	#music .music-swiper,
+	#music .music-swiper .swiper-wrapper,
+	#music .music-swiper .swiper-slide,
+	#licensing .licensing-swiper,
+	#licensing .licensing-swiper .swiper-wrapper,
+	#licensing .licensing-swiper .swiper-slde {
+		height: 50vh;
+		width: 100%;
+	}
+
+	#music .music-swiper .swiper-slide,
+	#licensing .licensing-swiper .swiper-slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		box-sizing: border-box;
+	}
+
+	#music .music-swiper,
+	#licensing .licensing-swiper {
+		position: relative;
+	}
+
+	#music .music-swiper .swiper-pagination,
+	#licensing .licensing-swiper .swiper-pagination {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 1rem;
+		background-color: #00000000;
+	}
