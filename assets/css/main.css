@@ -4327,7 +4327,7 @@ input, select, textarea {
 		gap: 0.5rem;
 		align-content: center;
 		/* border-radius: 12px; */
-		padding: 1.25rem 1.25rem;
+		/* padding: 1.25rem 1.25rem; */
 	}
 
 	#licensing .licensing-slide h3 {
@@ -4378,7 +4378,7 @@ input, select, textarea {
 #licensing .swiper {
   overflow: hidden;
   /* border-radius: 12px; */
-  width: 66%;
+  width: 75vw;
   height: 33vh;
 }
 
@@ -4389,7 +4389,7 @@ input, select, textarea {
 
 #licensing .swiper-slide {
   flex: 0 0 100% !important;
-  width: 100% !important;
+  width: 100vw !important;
   height: auto;
   display: flex;
   justify-content: center;
@@ -4577,7 +4577,7 @@ input, select, textarea {
 		#music .swiper, #licensing .swiper {
 			overflow: hidden;
 			/* border-radius: 12px; */
-			width: 100%;
+			width: 100vw;
 			height: 240px;
 		}
 
@@ -4612,7 +4612,7 @@ input, select, textarea {
 		#music .swiper, #licensing .swiper {
 			overflow: hidden;
 			/* border-radius: 12px; */
-			width: 100%;
+			width: 100vw;
 			height: 240px;
 		}
 
@@ -4657,13 +4657,13 @@ input, select, textarea {
 	#licensing .inner,
 	#licensing .content {
 		height: 100%;
-		width: 100%;
+		width: 100vw;
 	}
 
 	#music .music-swiper,
 	#licensing .licensing-swiper {
-		width: 100%;
-		max-width: 100%;
+		width: 100vw;
+		max-width: 100vw;
 		display: block;
 		/* size: cover; */
 	}
@@ -4680,7 +4680,7 @@ input, select, textarea {
 	#licensing .licensing-swiper .swiper-wrapper,
 	#licensing .licensing-swiper .swiper-slde {
 		height: 50vh;
-		width: 100%;
+		width: 100vw;
 	}
 
 	#music .music-swiper .swiper-slide,
@@ -4705,3 +4705,86 @@ input, select, textarea {
 		bottom: 1rem;
 		background-color: #00000000;
 	}
+
+
+	/* Music/Licensing Slider Text Effect */
+
+	/* Animated headline – scoped to music slide only */
+#mus-slide1, #lic-slide1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Container */
+#mus-slide1 .music-animated-text,
+#lic-slide1 .licensing-animated-text {
+  font-weight: 450;
+  /* font: bold; */
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Shared line styles */
+#mus-slide1 .music-animated-text > div,
+#lic-slide1 .licensing-animated-text > div  {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Default state: no animation */
+#mus-slide1 .line-1, #lic-slide1 .line-1,
+#mus-slide1 .line-2, #lic-slide1 .line-2,
+#mus-slide1 .line-2 span, #lic-slide1 .line-2 span {
+  animation: none;
+}
+
+/* Animate ONLY when active */
+#mus-slide1.animate .line-1,
+#lic-slide1.animate .line-1 {
+  animation: music-showup 3.5s forwards;
+}
+
+#mus-slide1.animate .line-2,
+#lic-slide1.animate .line-2 {
+  animation: music-reveal 3.5s forwards;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#mus-slide1.animate .line-2 span,
+#lic-slide1.animate .line-2 span {
+  animation: music-slidein 3.5s forwards;
+}
+
+
+/* Animations */
+@keyframes music-showup {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  100% { opacity: 1; }  /* stay visible */
+}
+
+@keyframes music-reveal {
+  0%   { opacity: 0; width: 0; }
+  20%  { opacity: 1; width: 0; }
+  30%  { opacity: 1; width: 360px; }
+  100% { opacity: 1; width: 360px; } /* stay visible */
+}
+
+@keyframes music-slidein {
+  0%   { margin-left: -800px; }
+  20%  { margin-left: -800px; }
+  35%  { margin-left: 0; }
+  100% { margin-left: 0; }
+}
+
+@media (max-width: 736px) {
+  #mus-slide1 .music-animated-text,
+  #lic-slide1 .licensing-animated-text {
+    font-size: 1.8rem;
+  }
+}

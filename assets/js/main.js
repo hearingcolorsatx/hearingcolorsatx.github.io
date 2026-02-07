@@ -196,5 +196,43 @@
 		});
 	});
 	
+// Music/Licensing Slider Text Effect
+
+	const animatedSlides = [
+		document.getElementById('mus-slide1'),
+		document.getElementById('lic-slide1')
+	].filter(Boolean);
+
+	const observer = new IntersectionObserver(
+	entries => {
+		entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.remove('animate');
+			void entry.target.offsetWidth; // restart animation
+			entry.target.classList.add('animate');
+		} else {
+			entry.target.classList.remove('animate');
+		}
+		});
+	},
+	{ threshold: 0.6 }
+	);
+
+	animatedSlides.forEach(slide => observer.observe(slide));
+
+
+	musicSwiper.on('slideChangeTransitionEnd', () => {
+	const activeSlide = musicSwiper.slides[musicSwiper.activeIndex];
+
+	if (activeSlide.id === 'mus-slide1' || activeSlide.id === 'lic-slide1') {
+		activeSlide.classList.remove('animate');
+		void activeSlide.offsetWidth; // restart animation
+		activeSlide.classList.add('animate');
+	} else {
+		animatedSlides.forEach(slide => slide.classList.remove('animate'));
+	}
+	});
+
+
 
 })(jQuery);
