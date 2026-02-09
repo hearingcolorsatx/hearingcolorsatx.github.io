@@ -220,7 +220,6 @@
 
 	animatedSlides.forEach(slide => observer.observe(slide));
 
-
 	musicSwiper.on('slideChangeTransitionEnd', () => {
 	const activeSlide = musicSwiper.slides[musicSwiper.activeIndex];
 
@@ -232,7 +231,5 @@
 		animatedSlides.forEach(slide => slide.classList.remove('animate'));
 	}
 	});
-
-
 
 })(jQuery);
