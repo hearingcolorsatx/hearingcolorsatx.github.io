@@ -4725,7 +4725,7 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  margin-left: 25%;
+  /* margin-left: 25%; */
 }
 
 #lic-slide1 .licensing-animated-text {
@@ -4736,7 +4736,7 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  margin-left: 45%;
+  /* margin-left: 33%; */
 }
 
 /* Shared line styles */
@@ -4880,11 +4880,13 @@ input, select, textarea {
   .music-animated-text .line-1,
   .licensing-animated-text .line-1 {
     transform: scaleX(3) scaleY(6);
+    transform-origin: left center;
   }
 
   .music-animated-text .line-2,
   .licensing-animated-text .line-2 {
     transform: scaleX(1.2) scaleY(1);
+    transform-origin: left center;
   }
 }
 
@@ -4892,7 +4894,7 @@ input, select, textarea {
 @media (min-width: 768px) {
   #mus-slide1 .music-animated-text {
     font-size: 2rem;
-    gap: 1rem;
+    gap: 6rem;
     width: auto;
     justify-content: flex-start;
     /* margin-left: 25%; */
@@ -4900,7 +4902,7 @@ input, select, textarea {
 
   #lic-slide1 .licensing-animated-text {
     font-size: 2rem;
-    gap: 1rem;
+    gap: 12rem;
     width: auto;
     justify-content: flex-start;
     /* margin-left: 33%; */
@@ -4908,7 +4910,7 @@ input, select, textarea {
 
   .music-animated-text .line-1,
   .licensing-animated-text .line-1 {
-    transform: scaleX(5) scaleY(6);
+    transform: scaleX(5) scaleY(7);
   }
 
   .music-animated-text .line-2,
