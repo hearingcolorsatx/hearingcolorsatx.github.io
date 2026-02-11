@@ -3862,7 +3862,6 @@ input, select, textarea {
 
 			.wrapper.spotlight.style3 {
 				background-color: #000000;
-				background-image: url('https://res.cloudinary.com/dw5m4wus8/video/upload/v1769229129/01_pyltyu.mp4');
 			}
 
 				.wrapper.spotlight.style3:before {
@@ -4304,10 +4303,12 @@ input, select, textarea {
 #music .swiper-slide:nth-child(2n) {
       /* background-color: #FB8C00; */
 	  background-color: #FDD835;
+	  color: #43A047;
     }
 
 #music .swiper-slide:nth-child(3n) {
       background-color: #43A047;
+	  color: #FDD835;
     }
 
 #music .swiper-slide:nth-child(4n) {
@@ -4863,12 +4864,12 @@ input, select, textarea {
 /* ===== Small phones: tighten further ===== */
 @media (max-width: 480px) {
   #mus-slide1 .music-animated-text {
-    gap: 8rem;
+    gap: 7rem;
     font-size: clamp(1.0rem, 5vw, 1.45rem);
   }
 
   #lic-slide1 .licensing-animated-text {
-    gap: 13rem;
+    gap: 12rem;
     font-size: clamp(1.0rem, 5vw, 1.45rem);
   }
 
@@ -4919,3 +4920,27 @@ input, select, textarea {
   }
 }
 
+/* #mus-slide1 {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+#mus-slide1 .bg-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#mus-slide1 .bg-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#mus-slide1 .inner {
+  position: relative;
+  z-index: 1;
+} */
