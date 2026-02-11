@@ -4302,11 +4302,12 @@ input, select, textarea {
     }
 
 #music .swiper-slide:nth-child(2n) {
-      background-color: #FB8C00;
+      /* background-color: #FB8C00; */
+	  background-color: #FDD835;
     }
 
 #music .swiper-slide:nth-child(3n) {
-      background-color: #FDD835;
+      background-color: #43A047;
     }
 
 #music .swiper-slide:nth-child(4n) {
@@ -4445,8 +4446,6 @@ input, select, textarea {
 #artists .artists-tagline {
   text-align: center;
   font-weight: normal;
-  font-size: 14pt;
-  opacity: 0.85;
 }
 
 	@media screen and (max-width: 1280px) {
@@ -4718,21 +4717,32 @@ input, select, textarea {
 }
 
 /* Container */
-#mus-slide1 .music-animated-text,
+#mus-slide1 .music-animated-text {
+  font-weight: 666;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 25%;
+}
+
 #lic-slide1 .licensing-animated-text {
   font-weight: 666;
   font-size: 2rem;
   line-height: 1.2;
   color: #fff;
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 45%;
 }
 
 /* Shared line styles */
 #mus-slide1 .music-animated-text > div,
 #lic-slide1 .licensing-animated-text > div  {
-  display: inline-block;
+  display: flex;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -4747,7 +4757,7 @@ input, select, textarea {
 }
 
 #mus-slide1 .line-2 span, #lic-slide1 .line-2 span {
-  display: inline-block;
+  display: flex;
   transform: translateX(0%);
   transform: translateY(0%);
 }
@@ -4785,8 +4795,8 @@ input, select, textarea {
 }
 
 @keyframes music-slidein {
-  0%   { margin-left: -200px; }
-  20%  { margin-left: -200px; }
+  0%   { margin-left: -800px; }
+  20%  { margin-left: -800px; }
   35%  { margin-left: 0; }
   100% { margin-left: 0; }
 }
@@ -4797,3 +4807,113 @@ input, select, textarea {
     font-size: 1.8rem;
   }
 }
+
+/* Layout: MUSIC on left, stacked words on right */
+.music-animated-text,
+.licensing-animated-text {
+  display: flex;
+  grid-template-columns: auto auto;
+  column-gap: 0.75em;
+  align-items: stretch; /* important so line-2 can match line-1 height */
+  /* transform-origin: 33%; */
+}
+
+/* BIG word */
+.music-animated-text .line-1,
+.licensing-animated-text .line-1 {
+  line-height: 1;          /* tighten so it feels like a block */
+  display: flex;
+  transform-origin: 100%;
+  /* text-align: left;
+  text-justify: auto; */
+}
+
+/* Stack container: match height of "Music" */
+.music-animated-text .line-2,
+.licensing-animated-text .line-2 {
+  display: flex;
+  flex-direction: column;
+  /* padding-right: 100%; */
+  height: 100%;              /* inherits the row height */
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* Each word gets equal vertical real estate */
+.music-animated-text .line-2 .stack-word,
+.licensing-animated-text .line-2 .stack-word  {
+  display: flex;
+  align-items: center;       /* vertical centering within each slot */
+  line-height: 1;
+  flex: 1;                   /* equal heights: 1/4 each */
+}
+
+.music-animated-text .line-1,
+.licensing-animated-text .line-1 {
+  transform: scaleX(5) scaleY(7); /* tweak */
+  /* transform-origin: left center; */
+}
+
+.music-animated-text .line-2,
+.licensing-animated-text .line-2 {
+  transform: scaleX(1.2) scaleY(1); /* tweak */
+  /* transform-origin: left center; */
+}
+
+/* ===== Small phones: tighten further ===== */
+@media (max-width: 480px) {
+  #mus-slide1 .music-animated-text {
+    gap: 8rem;
+    font-size: clamp(1.0rem, 5vw, 1.45rem);
+  }
+
+  #lic-slide1 .licensing-animated-text {
+    gap: 13rem;
+    font-size: clamp(1.0rem, 5vw, 1.45rem);
+  }
+
+  .music-animated-text,
+  .licensing-animated-text {
+    gap: 0.5rem;
+  }
+
+  .music-animated-text .line-1,
+  .licensing-animated-text .line-1 {
+    transform: scaleX(3) scaleY(6);
+  }
+
+  .music-animated-text .line-2,
+  .licensing-animated-text .line-2 {
+    transform: scaleX(1.2) scaleY(1);
+  }
+}
+
+/* ===== Tablet+ / Desktop: re-enable your “big” look safely ===== */
+@media (min-width: 768px) {
+  #mus-slide1 .music-animated-text {
+    font-size: 2rem;
+    gap: 1rem;
+    width: auto;
+    justify-content: flex-start;
+    /* margin-left: 25%; */
+  }
+
+  #lic-slide1 .licensing-animated-text {
+    font-size: 2rem;
+    gap: 1rem;
+    width: auto;
+    justify-content: flex-start;
+    /* margin-left: 33%; */
+  }
+
+  .music-animated-text .line-1,
+  .licensing-animated-text .line-1 {
+    transform: scaleX(5) scaleY(6);
+  }
+
+  .music-animated-text .line-2,
+  .licensing-animated-text .line-2 {
+    transform: scaleX(1.2) scaleY(1);
+  }
+}
+
