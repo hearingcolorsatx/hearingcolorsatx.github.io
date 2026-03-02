@@ -246,7 +246,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1.2em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3023,6 +3023,7 @@ input, select, textarea {
 				margin-top: -1.75em;
 				position: relative;
 				width: calc(100% + 3.5em);
+				margin: 0 0 0 0;
 			}
 
 				.features article .image img {
@@ -3826,7 +3827,8 @@ input, select, textarea {
 			.wrapper.spotlight .content {
 				width: 100%;
 				-ms-flex: 2;
-			}
+				text-align: left;
+				}
 
 			.wrapper.spotlight:nth-child(2n - 1) .inner {
 				-moz-flex-direction: row-reverse;
@@ -4183,6 +4185,14 @@ input, select, textarea {
 		margin-top: 100vh;
 	}
 
+	#about .content{
+		padding: 3em 3em 1em 3em;
+	}
+
+	#about content p {
+		line-height: 0%;
+	}
+
 	#header h1 a img {
 		max-width: 90%;
 		max-height: 90%;
@@ -4214,7 +4224,6 @@ input, select, textarea {
 	}
 
 	#about .js-more-toggle, #licensing .js-more-toggle {
-		margin-left: auto;
 		width: fit-content;
 	}
 
@@ -4280,6 +4289,7 @@ input, select, textarea {
 #music .swiper-slide p {
 	/* padding-left: 42%; */
 	text-align: center;
+	color: #fb8c00 !important
 }
 
 #music .swiper-slide a {
@@ -4339,6 +4349,7 @@ input, select, textarea {
 	#licensing .licensing-slide p {
 		margin: 0;
 		line-height: 1.5;
+		color: #8e24aa !important;
 	}
 
 	/* Pagination positioning */
@@ -4416,6 +4427,7 @@ input, select, textarea {
     color: #ffffff;
 	text-decoration-thickness: 0.1em;
     text-decoration:underline;
+	text-decoration-color: #8e24aa;
 }
 
 #licensing #lic-slide1 p {
@@ -4434,15 +4446,31 @@ input, select, textarea {
 
 #licensing .swiper-slide:nth-child(2n) {
       background-color: #26C6DA;
+	  /* color: #43A047; */
+	  /* opacity: 100%; */
     }
 
 #licensing .swiper-slide:nth-child(3n) {
       background-color: #1E88E5;
-    }
+      /* color: #26C6DA; */
+	  /* opacity: 100%; */
+	}
 
 #licensing .swiper-slide:nth-child(4n) {
       background-color: #8E24AA;
     }
+
+#delaney img {
+	width: 50%;
+	height: 50%;
+	align-items: center;
+}
+
+#neutron img {
+	width: 50%;
+	height: 50%;
+	align-items: center;
+}
 
 #artists .artists-tagline {
   text-align: center;
@@ -4819,6 +4847,16 @@ input, select, textarea {
   /* transform-origin: 33%; */
 }
 
+.music-animated-text,
+.licensing-animated-text {
+  transition: opacity 1s ease;
+}
+
+.music-animated-text.is-hidden,
+.licensing-animated-text.is-hidden {
+  opacity: 0;
+}
+
 /* BIG word */
 .music-animated-text .line-1,
 .licensing-animated-text .line-1 {
@@ -4875,8 +4913,14 @@ input, select, textarea {
 
   .music-animated-text,
   .licensing-animated-text {
+    transition: opacity 1s ease;
     gap: 0.5rem;
   }
+
+.music-animated-text.is-hidden,
+.licensing-animated-text.is-hidden {
+  opacity: 0;
+}
 
   .music-animated-text .line-1,
   .licensing-animated-text .line-1 {

@@ -67,7 +67,9 @@
 										</button>
 										<div class="more-content" id="more-about">
 											<p>Independent, artist-owned catalog built for film, advertising, and modern media.</p>
-											<p>***EXPANDED BIO COMING SOON***</p>
+											<p>Hearing Colors LLC is an artist-owned record label and sync-focused creative studio founded in 2019, with roots tracing back to 2006. Conceived during founder Tim Delaney’s transition from military service into music production, the company was built on a simple principle: quality music, owned by the artist, delivered through a clear and flexible licensing structure.</p>
+											<p>Operating as a hybrid label and licensing boutique, Hearing Colors develops emotionally resonant recordings while maintaining full rights ownership and direct clearance capability. The catalog spans intimate, harmony-driven songwriting under Tim Delaney and experimental, rhythm-forward production under neutron squared—two distinct creative identities united by intentional craft, narrative awareness, and sync viability.</p>
+											<p>Hearing Colors exists to simplify what has become an increasingly fragmented licensing ecosystem. With a commitment to transparency, artistic integrity, and professional discipline, the company bridges creative expression and practical utility—producing music designed not only to be heard, but to work.</p>
 											<p>Music should serve the story, not distract from it.</p>
 										</div>
 									</div>
@@ -175,7 +177,7 @@
 												<p>Artist-owned music with fast clearance and flexible licensing for visual media.
 												</p>
 												<a href="https://drive.google.com/file/d/1sp1HF4hc8kyqj5vjPr7_u_dT1zy7AmBq/view?usp=sharing">
-													<p>Click for quick terms, deliverables, and contact information.</p>
+													<p>Quick terms, deliverables, and contact information here.</p>
 												</a>
 
 											</section>
@@ -220,7 +222,29 @@
 											clickable: true,
 											},
 										});
-										</script>										
+										</script>
+										<script>
+										document.addEventListener('DOMContentLoaded', () => {
+
+										const animatedText = document.querySelector('.music-animated-text');
+										if (!animatedText) return;
+
+										const observer = new IntersectionObserver((entries) => {
+											entries.forEach(entry => {
+											if (!entry.isIntersecting) {
+												animatedText.classList.add('is-hidden');
+											} else {
+												animatedText.classList.remove('is-hidden');
+											}
+											});
+										}, {
+											threshold: 0.5 // adjust sensitivity (0 = any part visible, 1 = fully visible)
+										});
+
+										observer.observe(animatedText);
+
+										});
+										</script>
 									</div>
 							</section>
 
@@ -230,14 +254,14 @@
 									<h2 class="major">Arists</h2>
 									<p>The music we provide is made possible by our artists.</p>
 									<section class="features">
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a> -->
+										<article id="delaney">
+											<a href="https://timdelaneymusic.com" class="image"><img src="images/tim delaney text thumbnail blue.png" alt="Tim Delaney" /></a>
 											<h3 class="major">Tim Delaney</h3>
 											<p>Artist and producer from Austintonio, TX.</p>
 											<a href="https://timdelaneymusic.com" class="special">Visit Site</a>
 										</article>
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a> -->
+										<article id="neutron">
+											<a href="https://neutronsquared.com" class="image"><img src="images/neutron-squared-logo-black.jpg" alt="neutron squared" /></a>
 											<h3 class="major">neutron squared</h3>
 											<p>Character-driven production identity.</p>
 											<a href="https://neutronsquared.com" class="special">Visit Site</a>
