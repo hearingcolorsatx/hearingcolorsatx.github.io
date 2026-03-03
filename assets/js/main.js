@@ -5,80 +5,89 @@
 */
 
 
-	// Random color picker for buttons and form fields
-	// const colors = ['d75c30', 'ff9900', 'ffcc00', '008000', '3366ff', '0096ff', '993366'];
-	const colors = ['e53935', 'fb8c00', 'fdd835', '43a047', '26c6da', '1e88e5', '8e24aa'];
+// Random color picker for buttons and form fields
+// const colors = ['d75c30', 'ff9900', 'ffcc00', '008000', '3366ff', '0096ff', '993366'];
+const colors = ['e53935', 'fb8c00', 'fdd835', '43a047', '26c6da', '1e88e5', '8e24aa'];
 
-	let previousColor = null;
+let previousColor = null;
 
-	function getRandomColor() {
-		let randomIndex;
-		do {
-			randomIndex = Math.floor(Math.random() * colors.length);
-		} while (colors[randomIndex] === previousColor);
-		previousColor = colors[randomIndex];
-		return colors[randomIndex];
-	}
+function getRandomColor() {
+	let randomIndex;
+	do {
+		randomIndex = Math.floor(Math.random() * colors.length);
+	} while (colors[randomIndex] === previousColor);
+	previousColor = colors[randomIndex];
+	return colors[randomIndex];
+}
 
-	const links = document.querySelectorAll('#menu .links li a');
-	links.forEach(link => {
-		link.addEventListener('mouseover', () => {
-			const randomColor = getRandomColor();
-			link.style.backgroundColor = `#${randomColor}`;
-		});
-
-		link.addEventListener('mouseout', () => {
-			link.style.backgroundColor = '';
-		});
+const links = document.querySelectorAll('#menu .links li a');
+links.forEach(link => {
+	link.addEventListener('mouseover', () => {
+		const randomColor = getRandomColor();
+		link.style.backgroundColor = `#${randomColor}`;
+		link.style.setProperty('font-weight', 'bold', 'important');
 	});
 
-	// Assign elements to variables to act on
-	const button = document.querySelector('button');
-	const sendMessageButton = document.querySelector('input[type="submit"][value="Send Message"]');
-	const nameField = document.querySelector('input[type="text"][id="name"]');
-	const emailField = document.querySelector('input[type="email"][id="email"]');
-	const messageField = document.querySelector('textarea[id="message"]');
+	link.addEventListener('mouseout', () => {
+		link.style.backgroundColor = '';
+		link.style.color = '';
+		link.style.setProperty('font-weight', 'normal');
+	});
+});
 
-	// For the buttons
-	function addHoverEffect(element) {
-		if (element) {
-			element.addEventListener('mouseover', () => {
-				const randomColor = getRandomColor();
-				element.style.backgroundColor = `#${randomColor}`;
-			});
+// Assign elements to variables to act on
+const button = document.querySelector('button');
+const sendMessageButton = document.querySelector('input[type="submit"][value="Send Message"]');
+const nameField = document.querySelector('input[type="text"][id="name"]');
+const emailField = document.querySelector('input[type="email"][id="email"]');
+const messageField = document.querySelector('textarea[id="message"]');
 
-			element.addEventListener('mouseout', () => {
-				element.style.backgroundColor = '';
-			});
-		} // else {
-		// console.warn(element, 'not found on this page.');
-		// }
+// For the buttons
+function addHoverEffect(element) {
+	if (element) {
+		element.addEventListener('mouseover', () => {
+			const randomColor = getRandomColor();
+			element.style.backgroundColor = `#${randomColor}`;
+		});
+
+		element.addEventListener('mouseout', () => {
+			element.style.backgroundColor = '';
+		});
+	} // else {
+	// console.warn(element, 'not found on this page.');
+	// }
+}
+
+addHoverEffect(button);
+addHoverEffect(sendMessageButton);
+
+// For the form fields
+function addFocusEffect(element) {
+	if (element) {
+		element.addEventListener('focus', () => {
+			const randomColor = getRandomColor();
+			element.style.backgroundColor = `#${randomColor}`;
+			if (element.style.backgroundColor == "rgb(253, 216, 53)") {
+				element.style.color = "#43a047"
+			} else {
+				element.style.color = "#ffffff"
+			}
+		});
+
+		element.addEventListener('blur', () => {
+			element.style.backgroundColor = '';
+			element.style.color = '';
+		});
+	} else {
+		console.warn(element, 'not found on this page.');
 	}
+}
 
-	addHoverEffect(button);
-	addHoverEffect(sendMessageButton);
+addFocusEffect(nameField);
+addFocusEffect(emailField);
+addFocusEffect(messageField);
 
-	// For the form fields
-	function addFocusEffect(element) {
-		if (element) {
-			element.addEventListener('focus', () => {
-				const randomColor = getRandomColor();
-				element.style.backgroundColor = `#${randomColor}`;
-			});
-
-			element.addEventListener('blur', () => {
-				element.style.backgroundColor = '';
-			});
-		} else {
-			console.warn(element, 'not found on this page.');
-		}
-	}
-
-	addFocusEffect(nameField);
-	addFocusEffect(emailField);
-	addFocusEffect(messageField);
-
-	// End random color picker logic
+// End random color picker logic
 
 (function($) {
 
