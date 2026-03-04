@@ -58,7 +58,6 @@ function addHoverEffect(element) {
 	// }
 }
 
-addHoverEffect(button);
 addHoverEffect(sendMessageButton);
 
 // For the form fields
@@ -304,17 +303,5 @@ addFocusEffect(messageField);
 	);
 
 	animatedSlides.forEach(slide => observer.observe(slide));
-
-	musicSwiper.on('slideChangeTransitionEnd', () => {
-	const activeSlide = musicSwiper.slides[musicSwiper.activeIndex];
-
-	if (activeSlide.id === 'mus-slide1' || activeSlide.id === 'lic-slide1') {
-		activeSlide.classList.remove('animate');
-		void activeSlide.offsetWidth; // restart animation
-		activeSlide.classList.add('animate');
-	} else {
-		animatedSlides.forEach(slide => slide.classList.remove('animate'));
-	}
-	});
 
 })(jQuery);
