@@ -61,17 +61,15 @@
 									<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a> -->
 									<div class="content">
 										<h2 class="major">Hearing Colors</h2>
-										<p>Independent, artist-owned catalog of art-forward music for picture, story and sync.</p>
+										<p>Independent, artist-owned catalog of art-forward music.</p>
 										<button class="special js-more-toggle" data-target="#more-about" data-section="#about" aria-expanded="false" type="button">
 											More
 										</button>
 										<div class="more-content" id="more-about">
 											<!-- <p>Independent, artist-owned catalog built for film, advertising, and modern media.</p> -->
 											<p>Hearing Colors LLC is an artist-owned record label and licensing studio founded by Tim Delaney. Built on direct ownership and disciplined craft, the company develops music with both emotional weight and practical application.</p>
-											<p>The catalog moves between two distinct voices—intimate, harmony-driven songwriting and concept-forward, rhythm-based production—each designed with narrative awareness and licensing in mind.</p>
-											<p>Hearing Colors operates with a simple advantage: clarity.</p>
-											<p>Clear ownership. Clear intent. Clean execution.</p>
-											<p>Music that connects when heard—and holds when placed.</p>
+											<p>The current catalog moves between two distinct voices—intimate, harmony-driven songwriting and concept-forward, rhythm-based production—each designed with narrative awareness and artistic integrity.</p>
+											<p>Hearing Colors operates with a simple advantage: clarity. Clear ownership. Clear intent. Clean execution. Music that connects when heard—and holds when placed.</p>
 											<p>Music should serve the story, not distract from it.</p>
 										</div>
 									</div>
@@ -109,16 +107,16 @@
 
 												<div class="line-2" aria-label="that works on screen">
 												<span class="stack-word">that</span>
-												<span class="stack-word">works</span>
-												<span class="stack-word">on</span>
-												<span class="stack-word">screen</span>
+												<span class="stack-word rotating-word">makes sense</span>
+												<!-- <span class="stack-word"></span>
+												<span class="stack-word"></span> -->
 												</div>
 											</div>
 											</section>
 
 											<!-- Slide 2 -->
 											<section class="swiper-slide music-slide">
-												<p>Samples Coming Soon!</p>
+												<p>For picture, story and sync</p>
 											</section>
 
 											<!-- Slide 3 -->
@@ -285,7 +283,7 @@
 							<h2 class="major">Contact</h2>
 							<p>Looking for music that feels intentional?</p>
 							<p>Use the form below to get in touch.</p>
-							<form method="post" action="#" data-netlify="true">
+							<form method="post" action="#" data-netlify="true" netlify-honeypot="bot-field">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -293,13 +291,37 @@
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="project-type">Project Type</label>
+										<div class="custom-select" id="project-type-select">
+											<input type="hidden" name="project-type" id="project-type" required>
+
+											<div class="selected">-- Select One --</div>
+
+											<ul class="options">
+												<li data-value="general">General Inquiry</li>
+												<li data-value="sync-licensing">Licensing</li>
+												<li data-value="booking">Live Booking / DJ</li>
+												<li data-value="film-tv-ad">Film / TV / Ad</li>
+												<li data-value="podcast-game">Podcast / Video Game</li>
+												<li data-value="transcription">Music / Audio Transcription</li>
+												<li data-value="collaboration">Collaboration</li>
+											</ul>
+										</div>
+										</div>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
 										<textarea name="message" id="message" rows="4"></textarea>
 									</div>
-								</div>
+									<p hidden>
+										<label>
+											Don't fill this out:
+											<input name="bot-field" />
+										</label>
+									</p>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>

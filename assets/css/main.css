@@ -2230,6 +2230,14 @@ input, select, textarea {
 			background: #000000;
 		}
 
+		select option:hover {
+			color: #000000
+		}
+		select option:focus {
+			color: #000000
+		}
+
+
 		select:focus::-ms-value {
 			background-color: transparent;
 		}
@@ -4988,3 +4996,74 @@ input, select, textarea {
   position: relative;
   z-index: 1;
 } */
+
+
+.custom-select {
+	position: relative;
+	max-width: 35rem;
+}
+
+.custom-select .selected {
+	border: solid 2px rgba(255, 255, 255, 0.125);
+	padding: 0.75rem 1rem;
+	cursor: pointer;
+}
+
+.custom-select .options {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: solid 2px rgba(255, 255, 255, 0.125);
+	background: #000;
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+}
+
+.custom-select.open .options {
+	display: block;
+}
+
+.custom-select .options li {
+	padding: 0.75rem 1rem;
+	cursor: pointer;
+}
+
+/* Contact Form Submit Button */
+#footer form .actions {
+	margin: 1rem 0 0 0 !important;
+	padding: 0 !important;
+	display: block !important;
+}
+
+#footer form .actions li {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#footer .actions {
+    margin-top: 1rem !important;
+}
+
+#footer .actions li {
+    margin-left: 0 !important;
+}
+
+#footer textarea {
+    margin-bottom: 1rem;
+}
+
+#footer form .actions input[type="submit"] {
+	width: 100%;
+	max-width: 35rem;
+}
+
+.rotating-word {
+	display: inline-block;
+	transition: opacity 0.4s ease-in-out;
+}
+
+.rotating-word.fade-out {
+	opacity: 0;
+}

@@ -35,6 +35,89 @@ links.forEach(link => {
 	});
 });
 
+const customSelect = document.querySelector('#project-type-select');
+
+if (customSelect) {
+	const selected = customSelect.querySelector('.selected');
+	const hiddenInput = document.querySelector('#project-type');
+	const options = customSelect.querySelectorAll('.options li');
+
+	selected.addEventListener('click', () => {
+		customSelect.classList.toggle('open');
+	});
+
+	options.forEach(option => {
+		option.addEventListener('mouseover', () => {
+			const randomColor = getRandomColor();
+			option.style.backgroundColor = `#${randomColor}`;
+			option.style.fontWeight = 'bold';
+		});
+
+		option.addEventListener('mouseout', () => {
+			option.style.backgroundColor = '';
+			option.style.fontWeight = 'normal';
+		});
+
+		option.addEventListener('click', () => {
+			selected.textContent = option.textContent;
+			hiddenInput.value = option.dataset.value;
+			customSelect.classList.remove('open');
+		});
+		customSelect.addEventListener('click', (event) => {
+			event.stopPropagation();
+		});
+
+		document.addEventListener('click', (event) => {
+			if (!customSelect.contains(event.target)) {
+				customSelect.classList.remove('open');
+			}
+		});
+	});
+
+const observer = new MutationObserver(() => {
+	if (document.body.classList.contains('is-menu-visible')) {
+		customSelect.classList.remove('open');
+	}
+});
+
+observer.observe(document.body, {
+	attributes: true,
+	attributeFilter: ['class']
+});
+}
+
+// const customSelect = document.querySelector('#project-type-select');
+// const selected = customSelect.querySelector('.selected');
+// const hiddenInput = document.querySelector('#project-type');
+// const options = customSelect.querySelectorAll('.options li');
+
+// selected.addEventListener('click', () => {
+// 	customSelect.classList.toggle('open');
+// });
+
+// options.forEach(option => {
+// 	option.addEventListener('mouseover', () => {
+// 		const randomColor = getRandomColor();
+// 		option.style.backgroundColor = `#${randomColor}`;
+// 		option.style.fontWeight = 'bold';
+// 	});
+
+// 	option.addEventListener('mouseout', () => {
+// 		option.style.backgroundColor = '';
+// 		option.style.fontWeight = 'normal';
+// 	});
+
+// 	option.addEventListener('click', () => {
+// 		selected.textContent = option.textContent;
+// 		hiddenInput.value = option.dataset.value;
+// 		customSelect.classList.remove('open');
+// 	});
+// });
+
+// projectType.addEventListener('mouseout', () => {
+//     projectType.style.backgroundColor = '';
+// });
+
 // Assign elements to variables to act on
 const button = document.querySelector('button');
 const sendMessageButton = document.querySelector('input[type="submit"][value="Send Message"]');
@@ -230,24 +313,6 @@ addFocusEffect(messageField);
 
 // Learn More Buttion Functionality
 
-	// document.addEventListener("DOMContentLoaded", function () {
-	// 	const licensingSwiper = new Swiper(".mySwiper3", {
-	// 		grabCursor: true,
-	// 		effect: "creative",
-	// 		creativeEffect: {
-	// 		prev: { shadow: true, translate: ["-20%", 0, -1] },
-	// 		next: { translate: ["100%", 0, 0] },
-	// 		},
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 1,
-	// 		autoHeight: true,
-	// 		pagination: {
-	// 		el: ".mySwiper3 .swiper-pagination",
-	// 		clickable: true,
-	// 		},
-	// 	});
-	// });
-
 	const toggles = document.querySelectorAll(".js-more-toggle");
 
 	toggles.forEach((toggle) => {
@@ -304,4 +369,27 @@ addFocusEffect(messageField);
 
 	animatedSlides.forEach(slide => observer.observe(slide));
 
+const rotatingWord = document.querySelector('.rotating-word');
+
+const words = [
+	'makes sense',
+	'connects',
+	'resonates',
+	'works'
+];
+
+let wordIndex = 0;
+
+if (rotatingWord) {
+	setInterval(() => {
+		rotatingWord.classList.add('fade-out');
+
+		setTimeout(() => {
+			wordIndex = (wordIndex + 1) % words.length;
+			rotatingWord.textContent = words[wordIndex];
+			rotatingWord.classList.remove('fade-out');
+		}, 400);
+	}, 2200);
+}
+	
 })(jQuery);
