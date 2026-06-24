@@ -4806,15 +4806,22 @@ input, select, textarea {
   animation: music-showup 3.5s forwards;
 }
 
-#mus-slide1.animate .line-2,
-#lic-slide1.animate .licensing-animated-text span {
+#mus-slide1.animate .line-2 {
   animation: music-reveal 3.5s forwards;
   overflow: hidden;
   white-space: nowrap;
+  padding-top: 1em;
+}
+
+#lic-slide1.animate .licensing-animated-text span:not(.licensing-side-word) {
+  animation: music-reveal 3.5s forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
 }
 
 #mus-slide1.animate .line-2 span,
-#lic-slide1.animate .licensing-animated-text span {
+#lic-slide1.animate .licensing-animated-text span:not(.licensing-side-word) {
   animation: music-slidein 3.5s forwards;
 }
 
@@ -4900,7 +4907,7 @@ input, select, textarea {
 .licensing-animated-text .line-1 {
   line-height: 1;          /* tighten so it feels like a block */
   display: flex;
-  transform-origin: 100%;
+  /* transform-origin: 100%; */
   /* text-align: left;
   text-justify: auto; */
 }
@@ -4943,12 +4950,12 @@ input, select, textarea {
 /* ===== Small phones: tighten further ===== */
 @media (max-width: 480px) {
   #mus-slide1 .music-animated-text {
-    gap: 7rem;
+    gap: 4.75rem;
     font-size: clamp(1.0rem, 5vw, 1.45rem);
   }
 
   #lic-slide1 .licensing-animated-text {
-    gap: 12rem;
+    gap: 5rem;
     font-size: clamp(1.0rem, 5vw, 1.45rem);
   }
 
@@ -4963,10 +4970,14 @@ input, select, textarea {
   opacity: 0;
 }
 
-  .music-animated-text .line-1,
-  .licensing-animated-text .line-1 {
+  .music-animated-text .line-1 {
     transform: scaleX(3) scaleY(6);
     transform-origin: left center;
+  }
+
+  .licensing-animated-text .line-1 {
+    transform: scaleX(3) scaleY(6);
+    transform-origin: center center;
   }
 
   .music-animated-text .line-2,
@@ -4974,6 +4985,13 @@ input, select, textarea {
     transform: scaleX(1.2) scaleY(1);
     transform-origin: left center;
   }
+
+  .licensing-side-word {
+		margin-right: 2.75em;
+		height: 100%;
+		/* font-size: 0.8em; */
+  }
+
 }
 
 /* ===== Tablet+ / Desktop: re-enable your “big” look safely ===== */
@@ -4987,16 +5005,36 @@ input, select, textarea {
   }
 
   #lic-slide1 .licensing-animated-text {
-    font-size: 2rem;
+	margin-left: 0 !important;
+	/* gap: 0.5rem !important; */
+	transform: none;
+	justify-content: center;
+	max-width: 100%;
+
+	/* font-size: 2rem;
     gap: 1rem;
     width: auto;
     justify-content: flex-start;
-    margin-left: 50%;
+    margin-left: 50%; */
   }
 
-  .music-animated-text .line-1,
-  .licensing-animated-text .line-1 {
+  .music-animated-text .line-1 {
     transform: scaleX(5) scaleY(7);
+	transform-origin: right center;
+  }
+
+  .licensing-animated-text .line-1 {
+		/* transform: scaleX(2.1) scaleY(4.5); */
+		/* transform-origin: center center; */
+		font-size: 2rem;
+		gap: 1rem;
+		width: 100%;
+		/* justify-content: flex-start; */
+	}
+
+  .licensing-side-word {
+		margin-right: 7.25em;
+		font-size: 0.8em;
   }
 
   .music-animated-text .line-2,
@@ -5111,29 +5149,25 @@ input, select, textarea {
 	display: inline-block;
 	position: absolute;
 	right: 100%;
-	margin-right: 16.5em;
+	padding-right: 1em;
 	top: 50%;
 	width: 100%;
-	text-align: center;
 	transform: translateY(-50%) rotate(-90deg);
 	transform-origin: center;
 	white-space: nowrap;
 	font-size: 1em;
 	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: 0.08em;
-
+	letter-spacing: 0.02em;
+	/* visibility: hidden; */
 	opacity: 0;
 	transition: opacity 0.4s ease-in-out;
 }
 
-/* reveal after LICENSING starts sliding in */
-#lic-slide1.animate .licensing-side-word {
+#lic-slide1.animate .licensing-side-word:not(.fade-out) {
 	opacity: 1;
-	/* transition-delay: 1.5s; */
 }
 
-/* remove delay when rotating/fading words */
 #lic-slide1.animate .licensing-side-word.fade-out {
 	opacity: 0;
 	transition-delay: 0s;
