@@ -372,7 +372,7 @@ addFocusEffect(messageField);
 const rotatingWord = document.querySelector('.rotating-word');
 
 const words = [
-	'makes sense',
+	'makes<br>sense',
 	'connects',
 	'resonates',
 	'works'
@@ -386,8 +386,32 @@ if (rotatingWord) {
 
 		setTimeout(() => {
 			wordIndex = (wordIndex + 1) % words.length;
-			rotatingWord.textContent = words[wordIndex];
+			rotatingWord.innerHTML = words[wordIndex];
 			rotatingWord.classList.remove('fade-out');
+		}, 400);
+	}, 2200);
+}
+
+const licensingWord = document.querySelector('.licensing-side-word');
+
+const licensingWords = [
+	'simple',
+	'flexible',
+	'creative'
+];
+
+let licensingIndex = 0;
+
+if (licensingWord) {
+	licensingWord.textContent = licensingWords[licensingIndex];
+
+	setInterval(() => {
+		licensingWord.classList.add('fade-out');
+
+		setTimeout(() => {
+			licensingIndex = (licensingIndex + 1) % licensingWords.length;
+			licensingWord.innerHTML = licensingWords[licensingIndex];
+			licensingWord.classList.remove('fade-out');
 		}, 400);
 	}, 2200);
 }
