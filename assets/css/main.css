@@ -4772,7 +4772,7 @@ input, select, textarea {
   color: #fff;
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   /* margin-left: 33%; */
 }
 
@@ -4813,15 +4813,19 @@ input, select, textarea {
   padding-top: 1em;
 }
 
-#lic-slide1.animate .licensing-animated-text span:not(.licensing-side-word) {
+#lic-slide1.animate .licensing-side-word {
   animation: music-reveal 3.5s forwards;
   overflow: hidden;
   white-space: nowrap;
-  text-align: center;
 }
 
-#mus-slide1.animate .line-2 span,
+/* #mus-slide1.animate .line-2 span,
 #lic-slide1.animate .licensing-animated-text span:not(.licensing-side-word) {
+  animation: music-slidein 3.5s forwards;
+} */
+
+#mus-slide1.animate .line-2 span,
+#lic-slide1.animate .licensing-side-word {
   animation: music-slidein 3.5s forwards;
 }
 
@@ -4887,13 +4891,17 @@ input, select, textarea {
   display: inline-block;
   /* display: flex; */
   grid-template-columns: auto auto;
-  column-gap: 0.75em;
+  /* column-gap: 0.75em; */
   align-items: stretch; /* important so line-2 can match line-1 height */
   /* transform-origin: 33%; */
 }
 
-.music-animated-text,
+/* .music-animated-text,
 .licensing-animated-text {
+  transition: opacity 1s ease;
+} */
+
+.music-animated-text {
   transition: opacity 1s ease;
 }
 
@@ -4913,8 +4921,7 @@ input, select, textarea {
 }
 
 /* Stack container: match height of "Music" */
-.music-animated-text .line-2,
-.licensing-animated-text .line-2 {
+.music-animated-text .line-2 {
   display: flex;
   flex-direction: column;
   /* padding-right: 100%; */
@@ -4924,8 +4931,7 @@ input, select, textarea {
 }
 
 /* Each word gets equal vertical real estate */
-.music-animated-text .line-2 .stack-word,
-.licensing-animated-text .line-2 .stack-word  {
+.music-animated-text .line-2 .stack-word  {
   display: flex;
   padding-left: 0.5em;
   line-height: 1;
@@ -4938,11 +4944,9 @@ input, select, textarea {
 .music-animated-text .line-1,
 .licensing-animated-text .line-1 {
   transform: scaleX(5) scaleY(7); /* tweak */
-  /* transform-origin: left center; */
 }
 
-.music-animated-text .line-2,
-.licensing-animated-text .line-2 {
+.music-animated-text .line-2 {
   transform: scaleX(1.2) scaleY(1); /* tweak */
   /* transform-origin: left center; */
 }
@@ -4955,12 +4959,18 @@ input, select, textarea {
   }
 
   #lic-slide1 .licensing-animated-text {
-    gap: 5rem;
     font-size: clamp(1.0rem, 5vw, 1.45rem);
+	transform-origin: center;
+	padding-right: 5em;
   }
 
-  .music-animated-text,
+  /* .music-animated-text,
   .licensing-animated-text {
+    transition: opacity 1s ease;
+    gap: 0.5rem;
+  } */
+
+  .music-animated-text {
     transition: opacity 1s ease;
     gap: 0.5rem;
   }
@@ -4977,19 +4987,20 @@ input, select, textarea {
 
   .licensing-animated-text .line-1 {
     transform: scaleX(3) scaleY(6);
-    transform-origin: center center;
+    /* transform-origin: center center; */
   }
 
-  .music-animated-text .line-2,
-  .licensing-animated-text .line-2 {
+  .music-animated-text .line-2 {
     transform: scaleX(1.2) scaleY(1);
     transform-origin: left center;
   }
 
-  .licensing-side-word {
-		margin-right: 2.75em;
-		height: 100%;
-		/* font-size: 0.8em; */
+  #lic-slide1 .licensing-side-word {
+	width: 5em;
+	/* margin-right: 0.25em; */
+	font-size: 0.82em;
+	letter-spacing: 0.08em;
+	justify-content: left;
   }
 
 }
@@ -5008,14 +5019,14 @@ input, select, textarea {
 	margin-left: 0 !important;
 	/* gap: 0.5rem !important; */
 	transform: none;
-	justify-content: center;
+	/* justify-content: center; */
 	max-width: 100%;
 
 	/* font-size: 2rem;
     gap: 1rem;
     width: auto;
-    justify-content: flex-start;
     margin-left: 50%; */
+    justify-content: flex-start;
   }
 
   .music-animated-text .line-1 {
@@ -5027,18 +5038,18 @@ input, select, textarea {
 		/* transform: scaleX(2.1) scaleY(4.5); */
 		/* transform-origin: center center; */
 		font-size: 2rem;
-		gap: 1rem;
+		/* gap: 1rem; */
 		width: 100%;
-		/* justify-content: flex-start; */
+		justify-content: flex-start;
 	}
 
   .licensing-side-word {
+		display: flex;
 		margin-right: 7.25em;
 		font-size: 0.8em;
   }
 
-  .music-animated-text .line-2,
-  .licensing-animated-text .line-2 {
+  .music-animated-text .line-2 {
     transform: scaleX(1.2) scaleY(1);
   }
 }
@@ -5131,7 +5142,7 @@ input, select, textarea {
 }
 
 .rotating-word {
-	display: inline-block;
+	display: inline-flex;
 	padding-left: 0.5em;
 	width: 7.5em;          /* adjust as needed */
 	min-height: 2.2em;     /* keeps 2-line words from jumping */
@@ -5146,31 +5157,32 @@ input, select, textarea {
 }
 
 .licensing-side-word {
-	display: inline-block;
-	position: absolute;
-	right: 100%;
-	padding-right: 1em;
-	top: 50%;
+	display: inline-flex;
+
+	position: relative;
+	right: 27%;
 	width: 100%;
-	transform: translateY(-50%) rotate(-90deg);
-	transform-origin: center;
+	max-width: 5.75em;
+
+	transform: translateY(-50%) rotate(-90deg) scaleY(1.5);
+	transform-origin: bottom;
+
 	white-space: nowrap;
-	font-size: 1em;
+	font-size: 1.25em;
 	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: 0.02em;
-	/* visibility: hidden; */
+	letter-spacing: 0.08em;
+
 	opacity: 0;
 	transition: opacity 0.4s ease-in-out;
 }
 
-#lic-slide1.animate .licensing-side-word:not(.fade-out) {
+#lic-slide1.animate .licensing-side-word {
 	opacity: 1;
 }
 
 #lic-slide1.animate .licensing-side-word.fade-out {
 	opacity: 0;
-	transition-delay: 0s;
 }
 
 
