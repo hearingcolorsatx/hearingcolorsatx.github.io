@@ -4810,7 +4810,6 @@ input, select, textarea {
   animation: music-reveal 3.5s forwards;
   overflow: hidden;
   white-space: nowrap;
-  padding-top: 1em;
 }
 
 #lic-slide1.animate .licensing-side-word {
@@ -4936,7 +4935,7 @@ input, select, textarea {
   padding-left: 0.5em;
   line-height: 1;
   flex: 1;                   /* equal heights: 1/4 each */
-  font-size: 1.5em;
+  font-size: 0.8em;
   text-transform: uppercase;
 
 }
@@ -4954,9 +4953,10 @@ input, select, textarea {
 /* ===== Small phones: tighten further ===== */
 @media (max-width: 480px) {
   #mus-slide1 .music-animated-text {
-    gap: 4.75rem;
-    font-size: clamp(1.0rem, 5vw, 1.45rem);
-  }
+    gap: 5.5em;
+    font-size: 0.8em;
+	vertical-align:top;
+}
 
   #lic-slide1 .licensing-animated-text {
     font-size: clamp(1.0rem, 5vw, 1.45rem);
@@ -4998,7 +4998,7 @@ input, select, textarea {
   #lic-slide1 .licensing-side-word {
 	width: 5em;
 	/* margin-right: 0.25em; */
-	font-size: 0.82em;
+	font-size: 0.85em;
 	letter-spacing: 0.08em;
 	justify-content: left;
   }
@@ -5168,7 +5168,7 @@ input, select, textarea {
 	transform-origin: bottom;
 
 	white-space: nowrap;
-	font-size: 1.25em;
+	font-size: 1.5em;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
