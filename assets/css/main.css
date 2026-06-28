@@ -5001,7 +5001,7 @@ input, select, textarea {
   #lic-slide1 .licensing-side-word {
 	width: 5em;
 	right: 80%;
-	/* padding-right: 0.5em; */
+	padding-left: 0.5em;
 	font-size: 0.85em;
 	letter-spacing: 0.08em;
 	justify-content: flex-start;
