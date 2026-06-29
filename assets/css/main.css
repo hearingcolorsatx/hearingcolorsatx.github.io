@@ -4715,7 +4715,7 @@ input, select, textarea {
 	#licensing .licensing-swiper,
 	#licensing .licensing-swiper .swiper-wrapper,
 	#licensing .licensing-swiper .swiper-slide {
-		height: 66vh;
+		height: 50vh;
 		width: 100%;
 	}
 
