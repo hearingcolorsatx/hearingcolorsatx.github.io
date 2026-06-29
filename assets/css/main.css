@@ -4814,19 +4814,18 @@ input, select, textarea {
   letter-spacing: 0.08em;
 }
 
-#lic-slide1.animate .licensing-side-word {
+/* #lic-slide1.animate .licensing-side-word {
   animation: music-reveal 3.5s forwards;
   overflow: hidden;
   white-space: nowrap;
-}
+} */
 
 /* #mus-slide1.animate .line-2 span,
 #lic-slide1.animate .licensing-animated-text span:not(.licensing-side-word) {
   animation: music-slidein 3.5s forwards;
 } */
 
-#mus-slide1.animate .line-2 span,
-#lic-slide1.animate .licensing-side-word {
+#mus-slide1.animate .line-2 span {
   animation: music-slidein 3.5s forwards;
 }
 
