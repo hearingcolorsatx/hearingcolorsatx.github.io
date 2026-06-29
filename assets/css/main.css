@@ -4761,7 +4761,7 @@ input, select, textarea {
   color: #fff;
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   /* margin-left: 25%; */
 }
 
@@ -4923,9 +4923,8 @@ input, select, textarea {
   /* padding-left: 0.5em; */
   line-height: 1;
   flex: 1;                   /* equal heights: 1/4 each */
-  font-size: 0.8em;
+  font-size: 1em;
   text-transform: uppercase;
-
 }
 
 .music-animated-text .line-1,
@@ -4979,12 +4978,22 @@ input, select, textarea {
 
   #lic-slide1 .licensing-side-word {
 	width: 5em;
-	right: 80%;
+	right: 69%;
 	padding-left: 0.25em;
 	font-size: 0.85em;
 	letter-spacing: 0.08em;
 	justify-content: flex-start;
   }
+
+/* Each word gets equal vertical real estate */
+.music-animated-text .line-2 .stack-word  {
+  display: flex;
+  line-height: 1;
+  flex: 1;                   /* equal heights: 1/4 each */
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
 
 }
 
@@ -5100,7 +5109,7 @@ input, select, textarea {
 	/* padding-left: 0.5em; */
 	width: 7.5em;          /* adjust as needed */
 	min-height: 2.2em;     /* keeps 2-line words from jumping */
-	font-size: 1em;
+	font-size: 1.5em;
 	transition: opacity 0.4s ease-in-out;
 	text-transform: uppercase;
 	vertical-align: top;
@@ -5114,15 +5123,16 @@ input, select, textarea {
 	display: inline-flex;
 
 	position: absolute;
-	right: 100%;
+	right: 53%;
 	width: 100%;
 	max-width: 5.75em;
+	padding-left: 0.5em;
 
 	transform: translateY(-50%) rotate(-90deg) scaleY(1.5);
 	transform-origin: bottom;
 
 	white-space: nowrap;
-	font-size: 1em;
+	font-size: 1.5em;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
