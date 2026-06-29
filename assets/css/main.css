@@ -4802,7 +4802,7 @@ input, select, textarea {
 /* Animate ONLY when active */
 
 #mus-slide1.animate .line-1,
-#lic-slide1.animate .line-1 {
+#lic-slide1.animate .licensing-animated-text .line-1 {
   animation: music-showup 3.5s forwards;
 }
 
