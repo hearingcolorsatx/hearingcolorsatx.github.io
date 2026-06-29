@@ -4194,7 +4194,7 @@ input, select, textarea {
 	}
 
 	#about .content{
-		padding: 3em 3em 1em 3em;
+		padding:2.5em 2.5em 1em 2.5em;
 	}
 
 	#about content p {
@@ -4920,7 +4920,7 @@ input, select, textarea {
 /* Each word gets equal vertical real estate */
 .music-animated-text .line-2 .stack-word  {
   display: flex;
-  padding-left: 0.5em;
+  /* padding-left: 0.5em; */
   line-height: 1;
   flex: 1;                   /* equal heights: 1/4 each */
   font-size: 0.8em;
@@ -4953,7 +4953,7 @@ input, select, textarea {
 
   .music-animated-text {
     transition: opacity 1s ease;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
   }
 
 .music-animated-text.is-hidden,
@@ -4992,7 +4992,7 @@ input, select, textarea {
 @media (min-width: 768px) {
   #mus-slide1 .music-animated-text {
     font-size: 2rem;
-    gap: 1rem;
+    /* gap: 1rem; */
     width: auto;
     justify-content: flex-start;
     margin-left: 33%;
@@ -5097,7 +5097,7 @@ input, select, textarea {
 
 .rotating-word {
 	display: inline-flex;
-	padding-left: 0.5em;
+	/* padding-left: 0.5em; */
 	width: 7.5em;          /* adjust as needed */
 	min-height: 2.2em;     /* keeps 2-line words from jumping */
 	font-size: 1em;
