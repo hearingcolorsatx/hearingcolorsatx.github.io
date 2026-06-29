@@ -6,11 +6,13 @@
 -->
 <html>
 	<head>
-		<title>Solid State by HTML5 UP</title>
+		<title>Hearing Colors LLC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 	</head>
 	<body class="is-preload">
 
@@ -19,7 +21,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Solid State</a></h1>
+						<h1><a href="#"><img src="https://res.cloudinary.com/dw5m4wus8/image/upload/v1769020345/hearing_colors_text_logo_3_half_speed_nsoewr.gif" alt="" /></a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -29,12 +31,13 @@
 					<nav id="menu">
 						<div class="inner">
 							<h2>Menu</h2>
+							<!-- <h2><a href="#"><img src="https://res.cloudinary.com/dw5m4wus8/image/upload/v1769236440/hearing-colors-1_btyzfp.gif" alt="" /></a></h2> -->
 							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#music">Music</a></li>
+								<li><a href="#licensing">Licensing</a></li>
+								<li><a href="#artists">Artists</a></li>
+								<li><a href="#footer">Contact</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -53,86 +56,208 @@
 					<section id="wrapper">
 
 						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
+							<section id="about" class="wrapper spotlight style1">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+									<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a> -->
 									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+										<h2 class="major">Hearing Colors</h2>
+										<p>Independent, artist-owned catalog of art-forward music.</p>
+										<button class="special js-more-toggle" data-target="#more-about" data-section="#about" aria-expanded="false" type="button">
+											More
+										</button>
+										<div class="more-content" id="more-about">
+											<!-- <p>Independent, artist-owned catalog built for film, advertising, and modern media.</p> -->
+											<p>Hearing Colors LLC is an independent, artist-owned record label founded by Tim Delaney. Built on direct ownership and disciplined craft, the company produces music with both emotional weight and practical application.</p>
+											<p>The current catalog moves between two distinct voices—intimate, harmony-driven songwriting and concept-forward, rhythm-based production—each created with artistic integrity and narrative awareness.</p>
+											<p>Hearing Colors possesses a simple advantage: clarity. Clear ownership. Clear intent. Clean execution. Music that connects when heard—and holds when placed.</p>
+											<p>Music should serve the story, not distract from it.</p>
+										</div>
 									</div>
 								</div>
 							</section>
 
 						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
+							<section id="music" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+
+										<!-- Swiper -->
+										<div class="swiper mySwiper3 music-swiper" aria-label="Music details carousel">
+											<div class="swiper-wrapper">
+
+											<!-- Slide 1 -->
+											<section class="swiper-slide music-slide" id="mus-slide1">
+											<div class="music-animated-text">
+												<div class="line-1">MUSIC</div>
+
+												<div class="line-2" aria-label="that works on screen">
+												<span class="stack-word">that</span>
+												<span class="stack-word rotating-word">makes<br>sense</span>
+												<!-- <span class="stack-word"></span>
+												<span class="stack-word"></span> -->
+												</div>
+											</div>
+											</section>
+
+											<!-- Slide 2 -->
+											<section class="swiper-slide music-slide">
+												<p>Custom music for any project <br> - Picture, Story or Sync - </p>
+												<p>Film & Television</p>
+												<p>Podcast & Video game</p>
+												<p>Advertisement</p>
+											</section>
+											
+											<!-- Slide 3 -->
+											<section class="swiper-slide music-slide">
+												<p>Additional Services:</p>
+												<p>Live Booking / DJ / Karaoke</p>
+												<p>Artist Development & Collaboration</p>
+												<p>Music & Audio Transcription</p>
+												<br><p>INQUIRE USING FORM BELOW</p>
+											</section>
+
+											<!-- Slide 4 -->
+											<!-- <section class="swiper-slide music-slide">
+												<p>Coming Soon!</p>
+											</section> -->
+											</div>
+
+											<!-- Optional: dots -->
+											<div class="swiper-pagination"></div>
+										</div>
+										</div>
 									</div>
-								</div>
 							</section>
 
 						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
+							<section id="licensing" class="wrapper spotlight style3">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+
+										<!-- Swiper -->
+										<div class="swiper mySwiper3 licensing-swiper" aria-label="Licensing details carousel">
+											<div class="swiper-wrapper">
+
+											<!-- Slide 1 -->
+											<section class="swiper-slide licensing-slide" id="lic-slide1">
+												<span class="licensing-side-word"></span>
+												<div class="licensing-animated-text">
+													<div class="line-1">LICENSING</div>
+												</div>
+											</section>
+											
+											<!-- Slide 2 -->
+											<section class="swiper-slide licensing-slide">
+												<!-- <h3>Music For</h3> -->
+												<p>Artist-owned music with fast clearance <br>and flexible licensing for visual media</p>
+												<a href="https://drive.google.com/file/d/1sp1HF4hc8kyqj5vjPr7_u_dT1zy7AmBq/view?usp=sharing">
+												<p>Quick terms and deliverables available here</p>
+												</a>
+											</section>
+											
+											<!-- Slide 3 -->
+											<section class="swiper-slide licensing-slide">
+												<p>Licensing Packages Include:</p>
+												<p>Artist Owned Songs & Instrumentals</p>
+												<p>Stems - Sound FX, Instrument & Vocal Tracks</p>
+												<p>Custom Compositions & Sheet Music</p>		
+												<br><p>INQUIRE USING FORM BELOW</p>										
+											</section>
+
+											<!-- Slide 4 -->
+											<!-- <section class="swiper-slide licensing-slide">
+												<a href="https://drive.google.com/file/d/1sp1HF4hc8kyqj5vjPr7_u_dT1zy7AmBq/view?usp=sharing">
+													<p>Quick terms, deliverables,</p>
+													<p> and contact information.</p>
+												</a>
+											</section> -->
+
+											</div>
+											<!-- Optional: dots -->
+											<div class="swiper-pagination"></div>
+										</div>
+										</div>
+										<script>
+										// Swiper 3: creative effect (your "mySwiper3" config)
+										const licensingSwiper = new Swiper(".mySwiper3", {
+											grabCursor: true,
+											effect: "creative",
+											creativeEffect: {
+											prev: { shadow: true, translate: ["-20%", 0, -1] },
+											next: { translate: ["100%", 0, 0] },
+											},
+
+											// Nice-to-haves
+											slidesPerView: 1,
+											spaceBetween: 16,
+											autoHeight: true,
+											pagination: {
+											el: ".mySwiper3 .swiper-pagination",
+											clickable: true,
+											},
+										});
+										</script>
+										<script>
+										document.addEventListener('DOMContentLoaded', () => {
+
+										const animatedText = document.querySelector('.music-animated-text');
+										if (!animatedText) return;
+
+										const observer = new IntersectionObserver((entries) => {
+											entries.forEach(entry => {
+											if (!entry.isIntersecting) {
+												animatedText.classList.add('is-hidden');
+											} else {
+												animatedText.classList.remove('is-hidden');
+											}
+											});
+										}, {
+											threshold: 0.5 // adjust sensitivity (0 = any part visible, 1 = fully visible)
+										});
+
+										observer.observe(animatedText);
+
+										});
+										</script>
 									</div>
-								</div>
 							</section>
 
 						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
+							<section id="artists" class="wrapper alt style1">
 								<div class="inner">
-									<h2 class="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<h2 class="major">Arists</h2>
+									<p>The music we provide is made possible by our artists.</p>
 									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+										<article id="delaney">
+											<a href="https://timdelaneymusic.com" class="image"><img src="images/tim delaney text thumbnail blue.png" alt="Tim Delaney" /></a>
+											<h3 class="major">Tim Delaney</h3>
+											<p>Artist and producer from Austintonio, TX.</p>
+											<a href="https://timdelaneymusic.com" class="special">Visit Site</a>
 										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+										<article id="neutron">
+											<a href="https://neutronsquared.com" class="image"><img src="images/neutron-squared-logo-black.jpg" alt="neutron squared" /></a>
+											<h3 class="major">neutron squared</h3>
+											<p>Character-driven production identity.</p>
+											<a href="https://neutronsquared.com" class="special">Visit Site</a>
 										</article>
 									</section>
-									<ul class="actions">
+									    <p class="artists-tagline">
+											If you're telling a story, we care how it feels.
+										</p>
+									<!-- <ul class="actions">
 										<li><a href="#" class="button">Browse All</a></li>
-									</ul>
+									</ul> -->
 								</div>
 							</section>
-
-					</section>
+						</div>
 
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
+							<h2 class="major">Contact</h2>
+							<p>Looking for music that feels intentional?</p>
+							<p>Use the form below to get in touch.</p>
+							<form method="post" action="#" data-netlify="true" netlify-honeypot="bot-field">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -140,31 +265,47 @@
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="project-type">Inquiry / Project Type</label>
+										<div class="custom-select" id="project-type-select">
+											<input type="hidden" name="project-type" id="project-type" required>
+
+											<div class="selected">-- Select One --</div>
+
+											<ul class="options">
+												<li data-value="general">General Inquiry</li>
+												<li data-value="sync-licensing">Licensing</li>
+												<li data-value="booking">Live Booking / DJ / Karaoke</li>
+												<li data-value="film-tv-ad">Film / TV / Ad</li>
+												<li data-value="podcast-game">Podcast / Video Game</li>
+												<li data-value="transcription">Music / Audio Transcription</li>
+												<li data-value="collaboration">Collaboration</li>
+											</ul>
+										</div>
+										</div>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
 										<textarea name="message" id="message" rows="4"></textarea>
 									</div>
-								</div>
+									<p hidden>
+										<label>
+											Don't fill this out:
+											<input name="bot-field" />
+										</label>
+									</p>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; 2019 - <span id="currentYear"></span> Hearing Colors LLC. All rights reserved.</li>
+								<script>
+								const currentYear = new Date().getFullYear();
+								document.getElementById('currentYear').textContent = currentYear;
+								</script>
 							</ul>
 						</div>
 					</section>
@@ -178,6 +319,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
