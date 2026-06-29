@@ -4890,17 +4890,9 @@ input, select, textarea {
 .licensing-animated-text {
   position: relative;
   display: inline-block;
-  /* display: flex; */
   grid-template-columns: auto auto;
-  /* column-gap: 0.75em; */
   align-items: stretch; /* important so line-2 can match line-1 height */
-  /* transform-origin: 33%; */
 }
-
-/* .music-animated-text,
-.licensing-animated-text {
-  transition: opacity 1s ease;
-} */
 
 .music-animated-text {
   transition: opacity 1s ease;
@@ -4915,17 +4907,12 @@ input, select, textarea {
 .music-animated-text .line-1,
 .licensing-animated-text .line-1 {
   line-height: 1;          /* tighten so it feels like a block */
-  display: flex;
-  /* transform-origin: 100%; */
-  /* text-align: left;
-  text-justify: auto; */
 }
 
 /* Stack container: match height of "Music" */
 .music-animated-text .line-2 {
   display: flex;
   flex-direction: column;
-  /* padding-right: 100%; */
   height: 100%;              /* inherits the row height */
   justify-content: space-between;
   text-align: left;
@@ -4949,7 +4936,6 @@ input, select, textarea {
 
 .music-animated-text .line-2 {
   transform: scaleX(1.2) scaleY(1); /* tweak */
-  /* transform-origin: left center; */
 }
 
 /* ===== Small phones: tighten further ===== */
@@ -4965,12 +4951,6 @@ input, select, textarea {
 	transform-origin: center;
 	padding-right: 8em;
   }
-
-  /* .music-animated-text,
-  .licensing-animated-text {
-    transition: opacity 1s ease;
-    gap: 0.5rem;
-  } */
 
   .music-animated-text {
     transition: opacity 1s ease;
@@ -5039,10 +5019,7 @@ input, select, textarea {
   }
 
   .licensing-animated-text .line-1 {
-		/* transform: scaleX(2.1) scaleY(4.5); */
-		/* transform-origin: center center; */
 		font-size: 2rem;
-		/* gap: 1rem; */
 		width: 100%;
 		justify-content: flex-start;
 	}
@@ -5057,32 +5034,6 @@ input, select, textarea {
     transform: scaleX(1.2) scaleY(1);
   }
 }
-
-/* #mus-slide1 {
-  position: relative;
-  overflow: hidden;
-  background: #000;
-}
-
-#mus-slide1 .bg-video {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-#mus-slide1 .bg-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-#mus-slide1 .inner {
-  position: relative;
-  z-index: 1;
-} */
-
 
 .custom-select {
 	position: relative;
@@ -5183,6 +5134,7 @@ input, select, textarea {
 
 #lic-slide1.animate .licensing-side-word {
 	opacity: 1;
+	transition: opacity 0.4s ease-in-out;
 }
 
 #lic-slide1.animate .licensing-side-word.fade-out {

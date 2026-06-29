@@ -403,8 +403,6 @@ const licensingWords = [
 let licensingIndex = 0;
 
 if (licensingWord) {
-	licensingWord.textContent = licensingWords[licensingIndex];
-
 	setInterval(() => {
 		licensingWord.classList.add('fade-out');
 
