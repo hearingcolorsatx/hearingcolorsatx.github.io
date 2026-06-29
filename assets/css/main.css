@@ -4939,7 +4939,7 @@ input, select, textarea {
 /* ===== Small phones: tighten further ===== */
 @media (max-width: 480px) {
   #mus-slide1 .music-animated-text {
-    gap: 5.5em;
+    gap: 5.75em;
     font-size: 1em;
 	vertical-align:top;
 }
